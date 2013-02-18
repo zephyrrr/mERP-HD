@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8C57B809-FF3E-40A6-8506-999FBACC5FED}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hd.Run</RootNamespace>
+    <AssemblyName>Hd.Run</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationIcon>Hd.Run.ico</ApplicationIcon>
+    <StartupObject>Hd.Run.Program</StartupObject>
+    <SourceAnalysisOverrideSettingsFile>C:\Documents and Settings\Administrator\Application Data\ICSharpCode/SharpDevelop3.0\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Feng.Application" />
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Controller" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="Feng.Run" />
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="Feng.Windows.View" />
+    <Reference Include="Hd.Model.Dao" />
+    <Reference Include="Hd.Model.Kj" />
+    <Reference Include="NHibernate" />
+    <Reference Include="Spring.Core" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ConvertFromVersion1.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="connectionStrings.config" />
+    <None Include="hd.model.ba.config" />
+    <None Include="hd.model.base.config" />
+    <None Include="hd.model.cn.config" />
+    <None Include="hd.model.cx.config" />
+    <None Include="hd.model.fp.config" />
+    <None Include="hd.model.jk.config" />
+    <None Include="hd.model.jk2.config" />
+    <None Include="hd.model.kj.config" />
+    <None Include="hd.model.nmcg.config" />
+    <None Include="mime_types" />
+    <None Include="release.config" />
+    <None Include="hd.model.ck.config" />
+    <None Include="hd.model.ky.config" />
+    <None Include="hd.model.px.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hd.Forms.Resource\Hd.Forms.Resource.csproj">
+      <Project>{FC850DFA-CFEC-4756-A852-B3AC9CDAC88E}</Project>
+      <Name>Hd.Forms.Resource</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Base\Hd.Model.Base.csproj">
+      <Project>{7F73873B-3465-485F-B83B-43526F544C6D}</Project>
+      <Name>Hd.Model.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Cn\Hd.Model.Cn.csproj">
+      <Project>{EB500A5F-CD73-4840-9F4C-37FB03400E9B}</Project>
+      <Name>Hd.Model.Cn</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Jk\Hd.Model.Jk.csproj">
+      <Project>{5B28BCF8-B2D8-422C-867D-E04BB4D118FA}</Project>
+      <Name>Hd.Model.Jk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Nmcg\Hd.Model.Nmcg.csproj">
+      <Project>{3C072E77-8558-41FD-BDB6-43CB2CCF4866}</Project>
+      <Name>Hd.Model.Nmcg</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Yw\Hd.Model.Yw.csproj">
+      <Project>{02986CD7-2566-4008-8D34-F49D17ADBADF}</Project>
+      <Name>Hd.Model.Yw</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Service\Hd.Service.csproj">
+      <Project>{4ED9DBFB-1C12-43F3-B8C1-6D8B3EFFF50C}</Project>
+      <Name>Hd.Service</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Hd.Run.ico" />
+    <Content Include="neokernel_props.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

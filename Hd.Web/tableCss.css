@@ -1,0 +1,26 @@
+﻿.xtop, .xbottom {display:block; background:transparent; font-size:1px;}
+.xb1, .xb2, .xb3, .xb4 {display:block; overflow:hidden;background: #DFE6EF;}
+.xb1, .xb2, .xb3 {height:1px;}
+.xb2, .xb3, .xb4 {border-left:1px solid #0088CC; border-right:1px solid #0088CC;}
+.xb1 {margin:0 5px; background:#0088CC;}
+.xb2 {margin:0 3px; border-width:0 2px;}
+.xb3 {margin:0 2px;}
+.xb4 {height:2px; margin:0 1px;}
+.xboxcontent {display:block; border:0 solid #0088CC; border-width:0 1px; padding: 4px; background: #D4E1D8;}
+
+
+/*
+	<b class="xtop">
+	<b class="xb1"></b>
+	<b class="xb2"></b>
+	<b class="xb3"></b>
+	<b class="xb4"></b>
+	</b>
+	<div class="xboxcontent"><br />不用图片<br/>不用表格实现圆角</div>
+	<b class="xbottom">
+	<b class="xb4"></b>
+	<b class="xb3"></b>
+	<b class="xb2"></b>
+	<b class="xb1"></b>
+	</b>
+*/

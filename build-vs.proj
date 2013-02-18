@@ -1,0 +1,5 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Target Name="Build">
+    		<MSBuild Projects="Hd.sln" Properties="Configuration=Debug" ContinueOnError="true" StopOnFirstFailure="false" />
+    </Target>
+</Project>

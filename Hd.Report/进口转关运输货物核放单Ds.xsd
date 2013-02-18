@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="进口转关运输货物核放单Ds" targetNamespace="http://tempuri.org/进口转关运输货物核放单Ds.xsd" xmlns:mstns="http://tempuri.org/进口转关运输货物核放单Ds.xsd" xmlns="http://tempuri.org/进口转关运输货物核放单Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="进口转关运输货物核放单Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="进口转关运输货物核放单Ds" msprop:Generator_UserDSName="进口转关运输货物核放单Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="进口装运输货物核放单" msprop:Generator_UserTableName="进口装运输货物核放单" msprop:Generator_RowDeletedName="进口装运输货物核放单RowDeleted" msprop:Generator_TableClassName="进口装运输货物核放单DataTable" msprop:Generator_RowChangedName="进口装运输货物核放单RowChanged" msprop:Generator_RowClassName="进口装运输货物核放单Row" msprop:Generator_RowChangingName="进口装运输货物核放单RowChanging" msprop:Generator_RowEvArgName="进口装运输货物核放单RowChangeEvent" msprop:Generator_RowEvHandlerName="进口装运输货物核放单RowChangeEventHandler" msprop:Generator_TablePropName="进口装运输货物核放单" msprop:Generator_TableVarName="table进口装运输货物核放单" msprop:Generator_RowDeletingName="进口装运输货物核放单RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="转关申报单编号" msprop:Generator_UserColumnName="转关申报单编号" msprop:Generator_ColumnPropNameInRow="转关申报单编号" msprop:Generator_ColumnVarNameInTable="column转关申报单编号" msprop:Generator_ColumnPropNameInTable="转关申报单编号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="申请人" msprop:Generator_UserColumnName="申请人" msprop:Generator_ColumnPropNameInRow="申请人" msprop:Generator_ColumnVarNameInTable="column申请人" msprop:Generator_ColumnPropNameInTable="申请人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="进境运输工具名称" msprop:Generator_UserColumnName="进境运输工具名称" msprop:Generator_ColumnPropNameInRow="进境运输工具名称" msprop:Generator_ColumnVarNameInTable="column进境运输工具名称" msprop:Generator_ColumnPropNameInTable="进境运输工具名称Column" type="xs:string" minOccurs="0" />
+              <xs:element name="船名航次" msprop:Generator_UserColumnName="船名航次" msprop:Generator_ColumnPropNameInRow="船名航次" msprop:Generator_ColumnVarNameInTable="column船名航次" msprop:Generator_ColumnPropNameInTable="船名航次Column" type="xs:string" minOccurs="0" />
+              <xs:element name="提运单号" msprop:Generator_UserColumnName="提运单号" msprop:Generator_ColumnPropNameInRow="提运单号" msprop:Generator_ColumnVarNameInTable="column提运单号" msprop:Generator_ColumnPropNameInTable="提运单号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="进境日期" msprop:Generator_UserColumnName="进境日期" msprop:Generator_ColumnPropNameInRow="进境日期" msprop:Generator_ColumnVarNameInTable="column进境日期" msprop:Generator_ColumnPropNameInTable="进境日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="件数" msprop:Generator_UserColumnName="件数" msprop:Generator_ColumnPropNameInRow="件数" msprop:Generator_ColumnVarNameInTable="column件数" msprop:Generator_ColumnPropNameInTable="件数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="重量" msprop:Generator_UserColumnName="重量" msprop:Generator_ColumnPropNameInRow="重量" msprop:Generator_ColumnVarNameInTable="column重量" msprop:Generator_ColumnPropNameInTable="重量Column" type="xs:int" minOccurs="0" />
+              <xs:element name="箱型" msprop:Generator_UserColumnName="箱型" msprop:Generator_ColumnPropNameInRow="箱型" msprop:Generator_ColumnVarNameInTable="column箱型" msprop:Generator_ColumnPropNameInTable="箱型Column" type="xs:int" minOccurs="0" />
+              <xs:element name="指运地" msprop:Generator_UserColumnName="指运地" msprop:Generator_ColumnPropNameInRow="指运地" msprop:Generator_ColumnVarNameInTable="column指运地" msprop:Generator_ColumnPropNameInTable="指运地Column" type="xs:string" minOccurs="0" />
+              <xs:element name="预计运抵时间" msprop:Generator_UserColumnName="预计运抵时间" msprop:Generator_ColumnPropNameInRow="预计运抵时间" msprop:Generator_ColumnVarNameInTable="column预计运抵时间" msprop:Generator_ColumnPropNameInTable="预计运抵时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="承运人" msprop:Generator_UserColumnName="承运人" msprop:Generator_ColumnPropNameInRow="承运人" msprop:Generator_ColumnVarNameInTable="column承运人" msprop:Generator_ColumnPropNameInTable="承运人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="境内运输工具名称" msprop:Generator_UserColumnName="境内运输工具名称" msprop:Generator_ColumnPropNameInRow="境内运输工具名称" msprop:Generator_ColumnVarNameInTable="column境内运输工具名称" msprop:Generator_ColumnPropNameInTable="境内运输工具名称Column" type="xs:string" minOccurs="0" />
+              <xs:element name="境内运输工具编号" msprop:Generator_UserColumnName="境内运输工具编号" msprop:Generator_ColumnPropNameInRow="境内运输工具编号" msprop:Generator_ColumnVarNameInTable="column境内运输工具编号" msprop:Generator_ColumnPropNameInTable="境内运输工具编号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="箱号" msprop:Generator_UserColumnName="箱号" msprop:Generator_ColumnPropNameInRow="箱号" msprop:Generator_ColumnVarNameInTable="column箱号" msprop:Generator_ColumnPropNameInTable="箱号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="封志号" msprop:Generator_UserColumnName="封志号" msprop:Generator_ColumnPropNameInRow="封志号" msprop:Generator_ColumnVarNameInTable="column封志号" msprop:Generator_ColumnPropNameInTable="封志号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="报关员" msprop:Generator_UserColumnName="报关员" msprop:Generator_ColumnPropNameInRow="报关员" msprop:Generator_ColumnVarNameInTable="column报关员" msprop:Generator_ColumnPropNameInTable="报关员Column" type="xs:string" minOccurs="0" />
+              <xs:element name="经办关员" msprop:Generator_UserColumnName="经办关员" msprop:Generator_ColumnPropNameInRow="经办关员" msprop:Generator_ColumnVarNameInTable="column经办关员" msprop:Generator_ColumnPropNameInTable="经办关员Column" type="xs:string" minOccurs="0" />
+              <xs:element name="数量" msprop:Generator_UserColumnName="数量" msprop:Generator_ColumnPropNameInRow="数量" msprop:Generator_ColumnVarNameInTable="column数量" msprop:Generator_ColumnPropNameInTable="数量Column" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

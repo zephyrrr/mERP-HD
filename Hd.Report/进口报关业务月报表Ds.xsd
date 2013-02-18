@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="进口报关业务月报表Ds" targetNamespace="http://tempuri.org/进口报关业务月报表Ds.xsd" xmlns:mstns="http://tempuri.org/进口报关业务月报表Ds.xsd" xmlns="http://tempuri.org/进口报关业务月报表Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="进口报关业务月报表Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="进口报关业务月报表Ds" msprop:Generator_DataSetName="进口报关业务月报表Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="委托情况" msprop:Generator_UserTableName="委托情况" msprop:Generator_RowDeletedName="委托情况RowDeleted" msprop:Generator_RowChangedName="委托情况RowChanged" msprop:Generator_RowClassName="委托情况Row" msprop:Generator_RowChangingName="委托情况RowChanging" msprop:Generator_RowEvArgName="委托情况RowChangeEvent" msprop:Generator_RowEvHandlerName="委托情况RowChangeEventHandler" msprop:Generator_TableClassName="委托情况DataTable" msprop:Generator_TableVarName="table委托情况" msprop:Generator_RowDeletingName="委托情况RowDeleting" msprop:Generator_TablePropName="委托情况">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="事项" msprop:Generator_UserColumnName="事项" msprop:Generator_ColumnVarNameInTable="column事项" msprop:Generator_ColumnPropNameInRow="事项" msprop:Generator_ColumnPropNameInTable="事项Column" type="xs:string" minOccurs="0" />
+              <xs:element name="属性" msprop:Generator_UserColumnName="属性" msprop:Generator_ColumnVarNameInTable="column属性" msprop:Generator_ColumnPropNameInRow="属性" msprop:Generator_ColumnPropNameInTable="属性Column" type="xs:string" minOccurs="0" />
+              <xs:element name="数值" msprop:Generator_UserColumnName="数值" msprop:Generator_ColumnVarNameInTable="column数值" msprop:Generator_ColumnPropNameInRow="数值" msprop:Generator_ColumnPropNameInTable="数值Column" type="xs:int" minOccurs="0" />
+              <xs:element name="状态" msprop:Generator_UserColumnName="状态" msprop:Generator_ColumnPropNameInRow="状态" msprop:Generator_ColumnVarNameInTable="column状态" msprop:Generator_ColumnPropNameInTable="状态Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="操作情况" msprop:Generator_UserTableName="操作情况" msprop:Generator_RowDeletedName="操作情况RowDeleted" msprop:Generator_TableClassName="操作情况DataTable" msprop:Generator_RowChangedName="操作情况RowChanged" msprop:Generator_RowClassName="操作情况Row" msprop:Generator_RowChangingName="操作情况RowChanging" msprop:Generator_RowEvArgName="操作情况RowChangeEvent" msprop:Generator_RowEvHandlerName="操作情况RowChangeEventHandler" msprop:Generator_TablePropName="操作情况" msprop:Generator_TableVarName="table操作情况" msprop:Generator_RowDeletingName="操作情况RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="事项" msprop:Generator_UserColumnName="事项" msprop:Generator_ColumnPropNameInRow="事项" msprop:Generator_ColumnVarNameInTable="column事项" msprop:Generator_ColumnPropNameInTable="事项Column" type="xs:string" minOccurs="0" />
+              <xs:element name="属性" msprop:Generator_UserColumnName="属性" msprop:Generator_ColumnPropNameInRow="属性" msprop:Generator_ColumnVarNameInTable="column属性" msprop:Generator_ColumnPropNameInTable="属性Column" type="xs:string" minOccurs="0" />
+              <xs:element name="数值" msprop:Generator_UserColumnName="数值" msprop:Generator_ColumnPropNameInRow="数值" msprop:Generator_ColumnVarNameInTable="column数值" msprop:Generator_ColumnPropNameInTable="数值Column" type="xs:int" minOccurs="0" />
+              <xs:element name="状态" msprop:Generator_UserColumnName="状态" msprop:Generator_ColumnPropNameInRow="状态" msprop:Generator_ColumnVarNameInTable="column状态" msprop:Generator_ColumnPropNameInTable="状态Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

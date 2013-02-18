@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="内贸结算明细Ds" targetNamespace="http://tempuri.org/内贸结算明细Ds.xsd" xmlns:mstns="http://tempuri.org/内贸结算明细Ds.xsd" xmlns="http://tempuri.org/内贸结算明细Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="内贸结算明细Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="内贸结算明细Ds" msprop:Generator_UserDSName="内贸结算明细Ds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="内贸结算明细" msprop:Generator_UserTableName="内贸结算明细" msprop:Generator_RowEvArgName="内贸结算明细RowChangeEvent" msprop:Generator_TableVarName="table内贸结算明细" msprop:Generator_TablePropName="内贸结算明细" msprop:Generator_RowDeletingName="内贸结算明细RowDeleting" msprop:Generator_RowChangingName="内贸结算明细RowChanging" msprop:Generator_RowDeletedName="内贸结算明细RowDeleted" msprop:Generator_TableClassName="内贸结算明细DataTable" msprop:Generator_RowChangedName="内贸结算明细RowChanged" msprop:Generator_RowEvHandlerName="内贸结算明细RowChangeEventHandler" msprop:Generator_RowClassName="内贸结算明细Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="对账单" msprop:Generator_ColumnVarNameInTable="column对账单" msprop:Generator_ColumnPropNameInRow="对账单" msprop:Generator_ColumnPropNameInTable="对账单Column" msprop:Generator_UserColumnName="对账单" type="xs:string" minOccurs="0" />
+              <xs:element name="结束日期" msprop:Generator_ColumnVarNameInTable="column结束日期" msprop:Generator_ColumnPropNameInRow="结束日期" msprop:Generator_ColumnPropNameInTable="结束日期Column" msprop:Generator_UserColumnName="结束日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="委托人" msprop:Generator_ColumnVarNameInTable="column委托人" msprop:Generator_ColumnPropNameInRow="委托人" msprop:Generator_ColumnPropNameInTable="委托人Column" msprop:Generator_UserColumnName="委托人" type="xs:string" minOccurs="0" />
+              <xs:element name="开航日期" msprop:Generator_ColumnVarNameInTable="column开航日期" msprop:Generator_ColumnPropNameInRow="开航日期" msprop:Generator_ColumnPropNameInTable="开航日期Column" msprop:Generator_UserColumnName="开航日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="货代自编号" msprop:Generator_ColumnVarNameInTable="column货代自编号" msprop:Generator_ColumnPropNameInRow="货代自编号" msprop:Generator_ColumnPropNameInTable="货代自编号Column" msprop:Generator_UserColumnName="货代自编号" type="xs:string" minOccurs="0" />
+              <xs:element name="箱量" msprop:Generator_ColumnVarNameInTable="column箱量" msprop:Generator_ColumnPropNameInRow="箱量" msprop:Generator_ColumnPropNameInTable="箱量Column" msprop:Generator_UserColumnName="箱量" type="xs:int" minOccurs="0" />
+              <xs:element name="船名航次" msprop:Generator_ColumnVarNameInTable="column船名航次" msprop:Generator_ColumnPropNameInRow="船名航次" msprop:Generator_ColumnPropNameInTable="船名航次Column" msprop:Generator_UserColumnName="船名航次" type="xs:string" minOccurs="0" />
+              <xs:element name="提单号" msprop:Generator_ColumnVarNameInTable="column提单号" msprop:Generator_ColumnPropNameInRow="提单号" msprop:Generator_ColumnPropNameInTable="提单号Column" msprop:Generator_UserColumnName="提单号" type="xs:string" minOccurs="0" />
+              <xs:element name="目的港" msprop:Generator_ColumnVarNameInTable="column目的港" msprop:Generator_ColumnPropNameInRow="目的港" msprop:Generator_ColumnPropNameInTable="目的港Column" msprop:Generator_UserColumnName="目的港" type="xs:string" minOccurs="0" />
+              <xs:element name="箱号" msprop:Generator_ColumnVarNameInTable="column箱号" msprop:Generator_ColumnPropNameInRow="箱号" msprop:Generator_ColumnPropNameInTable="箱号Column" msprop:Generator_UserColumnName="箱号" type="xs:string" minOccurs="0" />
+              <xs:element name="箱型" msprop:Generator_ColumnVarNameInTable="column箱型" msprop:Generator_ColumnPropNameInRow="箱型" msprop:Generator_ColumnPropNameInTable="箱型Column" msprop:Generator_UserColumnName="箱型" type="xs:string" minOccurs="0" />
+              <xs:element name="封志号" msprop:Generator_ColumnVarNameInTable="column封志号" msprop:Generator_ColumnPropNameInRow="封志号" msprop:Generator_ColumnPropNameInTable="封志号Column" msprop:Generator_UserColumnName="封志号" type="xs:string" minOccurs="0" />
+              <xs:element name="装货地" msprop:Generator_ColumnVarNameInTable="column装货地" msprop:Generator_ColumnPropNameInRow="装货地" msprop:Generator_ColumnPropNameInTable="装货地Column" msprop:Generator_UserColumnName="装货地" type="xs:string" minOccurs="0" />
+              <xs:element name="最终目的地" msprop:Generator_ColumnVarNameInTable="column最终目的地" msprop:Generator_ColumnPropNameInRow="最终目的地" msprop:Generator_ColumnPropNameInTable="最终目的地Column" msprop:Generator_UserColumnName="最终目的地" type="xs:string" minOccurs="0" />
+              <xs:element name="起始日期" msprop:Generator_ColumnVarNameInTable="column起始日期" msprop:Generator_ColumnPropNameInRow="起始日期" msprop:Generator_ColumnPropNameInTable="起始日期Column" msprop:Generator_UserColumnName="起始日期" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="装货时间" msprop:Generator_ColumnVarNameInTable="column装货时间" msprop:Generator_ColumnPropNameInRow="装货时间" msprop:Generator_ColumnPropNameInTable="装货时间Column" msprop:Generator_UserColumnName="装货时间" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="对账单_页脚" msprop:Generator_ColumnVarNameInTable="column对账单_页脚" msprop:Generator_ColumnPropNameInRow="对账单_页脚" msprop:Generator_ColumnPropNameInTable="对账单_页脚Column" msprop:Generator_UserColumnName="对账单_页脚" type="xs:string" minOccurs="0" />
+              <xs:element name="包干费" msprop:Generator_ColumnVarNameInTable="column包干费" msprop:Generator_ColumnPropNameInRow="包干费" msprop:Generator_ColumnPropNameInTable="包干费Column" msprop:Generator_UserColumnName="包干费" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DataColumn2" msprop:Generator_ColumnVarNameInTable="columnDataColumn2" msprop:Generator_ColumnPropNameInRow="DataColumn2" msprop:Generator_ColumnPropNameInTable="DataColumn2Column" msprop:Generator_UserColumnName="DataColumn2" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

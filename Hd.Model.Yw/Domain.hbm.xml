@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model" assembly="Hd.Model.Yw" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Hd.Model.业务费用收付, Hd.Model.Yw" schema-action="none" table="视图查询_财务费用_收付" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="SeqNo" not-null="false" />
+    <property name="费用项编号" column="费用项" />
+    <many-to-one name="费用实体" column="费用实体" not-null="false" update="false" insert="false" />
+    <many-to-one name="费用项" column="费用项" not-null="false" update="false" insert="false" />
+    <many-to-one name="收_业务费用" access="field.pascalcase-m-underscore" column="收_Id" not-null="false" update="false" insert="false" />
+    <many-to-one name="付_业务费用" access="field.pascalcase-m-underscore" column="付_Id" not-null="false" update="false" insert="false" />
+  </class>
+  <class name="Hd.Model.付款合同, Hd.Model.Yw" table="参数备案_付款合同" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="业务类型编号" column="业务类型" not-null="true" />
+    <property name="生效时间" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_付款合同_费用类别" />
+    <bag name="合同费用项" inverse="true" cascade="none">
+      <key column="付款合同" />
+      <one-to-many class="Hd.Model.付款合同费用项, Hd.Model.Yw" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.委托人合同, Hd.Model.Yw" table="参数备案_委托人合同" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="业务类型编号" column="业务类型" not-null="true" />
+    <property name="委托人编号" column="委托人" length="6" not-null="true" />
+    <property name="联系人编号" column="联系人" length="6" not-null="true" />
+    <property name="经手人编号" column="经手人" length="6" not-null="true" />
+    <property name="签约时间" not-null="true" />
+    <property name="有效期始" not-null="true" />
+    <property name="有效期止" not-null="true" />
+    <property name="允许单证晚到天数" not-null="true" />
+    <property name="常规费用结账时间" not-null="true" />
+    <property name="额外费用结账时间" not-null="true" />
+    <property name="支付方式" not-null="false" />
+    <property name="卸箱能力每天" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_委托人合同_业务类型" />
+    <many-to-one name="委托人" update="false" insert="false" foreign-key="FK_合同_委托人" />
+    <many-to-one name="联系人" update="false" insert="false" foreign-key="FK_合同_联系人" />
+    <many-to-one name="经手人" update="false" insert="false" foreign-key="FK_合同_经手人" />
+    <bag name="合同费用项" inverse="true" cascade="none">
+      <key column="委托人合同" />
+      <one-to-many class="Hd.Model.委托人合同费用项, Hd.Model.Yw" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.受托人合同, Hd.Model.Yw" table="参数备案_受托人合同" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="业务类型编号" column="业务类型" not-null="true" />
+    <property name="受托人编号" column="受托人" length="6" not-null="true" />
+    <property name="联系人编号" column="联系人" length="6" not-null="true" />
+    <property name="经手人编号" column="经手人" length="6" not-null="true" />
+    <property name="签约时间" not-null="true" />
+    <property name="有效期始" not-null="true" />
+    <property name="有效期止" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_受托人合同_业务类型" />
+    <many-to-one name="受托人" update="false" insert="false" foreign-key="FK_受托人合同_受托人" />
+    <many-to-one name="联系人" update="false" insert="false" foreign-key="FK_受托人合同_联系人" />
+    <many-to-one name="经手人" update="false" insert="false" foreign-key="FK_受托人合同_经手人" />
+    <bag name="合同费用项" inverse="true" cascade="none">
+      <key column="受托人合同" />
+      <one-to-many class="Hd.Model.受托人合同费用项, Hd.Model.Yw" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.费用信息附加字段, Hd.Model.Yw" table="视图查询_费用信息_承担" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="对外已确认" precision="19" scale="2" not-null="false" />
+    <property name="对外未确认" precision="19" scale="2" not-null="false" />
+    <property name="车队已确认" precision="19" scale="2" not-null="false" />
+    <property name="车队未确认" precision="19" scale="2" not-null="false" />
+    <property name="委托人已确认" precision="19" scale="2" not-null="false" />
+    <property name="委托人未确认" precision="19" scale="2" not-null="false" />
+  </class>
+  <class name="Hd.Model.业务费用理论值, Hd.Model.Yw" table="财务_业务费用理论值" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="费用项编号" column="费用项" length="3" not-null="false" />
+    <property name="收付标志" not-null="false" />
+    <property name="相关人编号" column="相关人" length="6" not-null="false" />
+    <property name="金额" length="19" precision="19" scale="2" not-null="false" />
+    <property name="箱Id" column="箱" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="费用实体" not-null="true" index="Idx_业务费用理论值_费用实体" cascade="none" foreign-key="FK_业务费用理论值_费用实体" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_业务费用理论值_费用项" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_业务费用理论值_相关人" />
+    <many-to-one name="箱" not-null="false" update="false" insert="false" foreign-key="FK_业务费用理论值_普通箱" />
+    <many-to-one name="票" column="费用实体" not-null="false" update="false" insert="false" foreign-key="FK_业务费用理论值_普通票" />
+  </class>
+  <class name="Hd.Model.费用信息, Hd.Model.Yw" table="财务_费用信息" polymorphism="explicit" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="业务类型编号" column="业务类型" not-null="false" />
+    <property name="费用项编号" column="费用项" length="3" not-null="true" />
+    <property name="完全标志付" not-null="true" />
+    <property name="备注" length="500" />
+    <property name="票Id" column="票" not-null="true" />
+    <property name="委托人承担" not-null="false" />
+    <property name="车队承担" not-null="false" />
+    <property name="对外付款" not-null="false" />
+    <property name="自己承担" not-null="false" />
+    <property name="填全状态" not-null="false" />
+    <property name="收款对账凭证状态" not-null="false" />
+    <property name="付款对账凭证状态" not-null="false" />
+    <property name="对外已确认" precision="19" scale="2" not-null="false" />
+    <property name="对外未确认" precision="19" scale="2" not-null="false" />
+    <property name="对外理论值" precision="19" scale="2" not-null="false" />
+    <property name="车队已确认" precision="19" scale="2" not-null="false" />
+    <property name="车队未确认" precision="19" scale="2" not-null="false" />
+    <property name="车队理论值" precision="19" scale="2" not-null="false" />
+    <property name="委托人已确认" precision="19" scale="2" not-null="false" />
+    <property name="委托人未确认" precision="19" scale="2" not-null="false" />
+    <property name="委托人理论值" precision="19" scale="2" not-null="false" />
+    <property name="Submitted" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_费用信息_费用类别" />
+    <many-to-one name="滞箱费费用信息" column="Id" not-null="true" update="false" insert="false" />
+    <many-to-one name="费用信息附加字段" column="Id" not-null="true" update="false" insert="false" />
+    <many-to-one name="费用项" not-null="true" update="false" insert="false" foreign-key="FK_费用信息_费用项" />
+    <many-to-one name="票" not-null="true" update="false" insert="false" foreign-key="FK_费用信息_普通票" />
+    <bag name="费用" inverse="true" cascade="none">
+      <key column="费用信息" />
+      <one-to-many class="Hd.Model.业务费用, Hd.Model.Yw" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.滞箱费费用信息, Hd.Model.Yw" schema-action="none" table="视图查询_费用信息_承担_滞箱费" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="退滞箱费已确认" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="退滞箱费未确认" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="最终滞箱费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="未确认滞箱费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+  </class>
+  <class name="Hd.Model.普通箱, Hd.Model.Yw" table="业务备案_普通箱" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="箱号" length="12" index="Idx_普通箱_箱号" />
+    <property name="箱型编号" column="箱型" not-null="false" />
+    <property name="重量" not-null="false" />
+    <property name="封志号" length="20" />
+    <property name="品名" length="500" />
+    <property name="内部备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="箱型" update="false" insert="false" foreign-key="FK_普通箱_箱型" />
+  </class>
+  <class name="Hd.Model.箱型, Hd.Model.Yw" table="参数备案_箱型" optimistic-lock="version">
+    <id name="编号">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="名称" length="10" not-null="true" unique="true" unique-key="UK_箱型_名称" />
+    <property name="中文名称" length="20" />
+    <property name="备注" length="100" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <joined-subclass name="Hd.Model.普通票, Hd.Model.Yw" table="业务备案_普通票" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_普通票_费用实体" />
+    <property name="品名" update="false" insert="false" formula="(SELECT dbo.Concatenate(DISTINCT a.品名) FROM dbo.业务备案_普通箱 AS a INNER JOIN dbo.视图信息_箱票 AS b ON a.ID = b.ID WHERE b.票 = Id) " />
+    <property name="代表性箱号" length="50" />
+    <property name="货代自编号" length="30" index="Idx_普通票_货代自编号" />
+    <property name="委托时间" not-null="false" />
+    <property name="委托人编号" column="委托人" length="6" not-null="false" />
+    <property name="提单号" length="50" index="Idx_普通票_提单号" />
+    <property name="合同号" length="50" index="Idx_普通票_合同号" />
+    <property name="报检号" length="50" index="Idx_普通票_报检号" />
+    <property name="报关单号" length="50" index="Idx_普通票_报关单号" />
+    <property name="船公司编号" column="船公司" length="6" not-null="false" />
+    <property name="船名航次" length="50" index="Idx_普通票_船名航次" />
+    <property name="箱量" not-null="false" />
+    <property name="标箱量" not-null="false" />
+    <property name="总重量" not-null="false" index="Idx_普通票_总重量" />
+    <property name="件数" not-null="false" />
+    <property name="单价" length="19" precision="19" scale="2" not-null="false" />
+    <property name="内部备注" length="500" />
+    <property name="对上备注" length="500" />
+    <property name="对下备注" length="500" />
+    <property name="允许应收对账" not-null="true" />
+    <property name="货物类别" length="50" not-null="false" />
+    <property name="自备箱" not-null="false" />
+    <property name="介绍人编号" column="介绍人" length="6" not-null="false" />
+    <many-to-one name="委托人" update="false" insert="false" foreign-key="FK_普通票_委托人" />
+    <many-to-one name="船公司" update="false" insert="false" foreign-key="FK_普通票_船公司" />
+    <many-to-one name="介绍人" update="false" insert="false" foreign-key="FK_普通票_介绍人" />
+    <bag name="费用信息" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Hd.Model.费用信息, Hd.Model.Yw" not-found="ignore" />
+    </bag>
+    <bag name="业务费用" inverse="true" cascade="none">
+      <key column="费用实体" />
+      <one-to-many class="Hd.Model.业务费用, Hd.Model.Yw" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+  <joined-subclass name="Hd.Model.委托人合同费用项, Hd.Model.Yw" table="参数备案_委托人合同费用项" extends="Hd.Model.合同费用项, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_委托人合同费用项_合同费用项" />
+    <property name="委托人合同费用项类型" not-null="true" />
+    <property name="可开票标志" not-null="true" />
+    <many-to-one name="委托人合同" not-null="true" cascade="none" foreign-key="FK_委托人合同费用项_委托人合同" />
+  </joined-subclass>
+  <subclass name="Hd.Model.业务费用, Hd.Model.Yw" discriminator-value="1" extends="Hd.Model.费用, Hd.Model.Base">
+    <property name="箱Id" column="箱" not-null="false" />
+    <many-to-one name="费用信息" not-null="false" cascade="none" foreign-key="FK_业务费用_费用信息" />
+    <many-to-one name="箱" not-null="false" update="false" insert="false" foreign-key="FK_业务费用_普通箱" />
+    <many-to-one name="票" column="费用实体" not-null="false" update="false" insert="false" />
+  </subclass>
+  <joined-subclass name="Hd.Model.受托人合同费用项, Hd.Model.Yw" table="参数备案_受托人合同费用项" extends="Hd.Model.合同费用项, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_受托人合同费用项_合同费用项" />
+    <property name="可开票标志" not-null="true" />
+    <property name="付款合同费用项类型" not-null="true" />
+    <many-to-one name="受托人合同" not-null="true" foreign-key="FK_受托人合同费用项_受托人合同" />
+  </joined-subclass>
+  <subclass name="Hd.Model.调节业务款, Hd.Model.Yw" discriminator-value="3" extends="Hd.Model.费用, Hd.Model.Base">
+    <property name="箱Id" column="箱" not-null="false" />
+    <many-to-one name="箱" not-null="false" update="false" insert="false" foreign-key="FK_业务费用_普通箱" />
+    <many-to-one name="票" column="费用实体" not-null="true" update="false" insert="false" />
+  </subclass>
+  <joined-subclass name="Hd.Model.付款合同费用项, Hd.Model.Yw" table="参数备案_付款合同费用项" extends="Hd.Model.合同费用项, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_付款合同费用项_合同费用项" />
+    <property name="默认相关人" length="400" />
+    <property name="付款合同费用项类型" not-null="true" />
+    <many-to-one name="付款合同" not-null="true" foreign-key="FK_付款合同费用项_付款合同" />
+  </joined-subclass>
+</hibernate-mapping>

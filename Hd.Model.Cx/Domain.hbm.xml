@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Cx" assembly="Hd.Model.Cx" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="查询_支票_过程在途" schema-action="none" table="视图查询_支票_过程在途" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="票据号码" />
+    <property name="源" />
+    <property name="买入时间" />
+    <property name="领用时间" />
+    <property name="经办人" />
+    <property name="领用方式" />
+    <one-to-one name="查询_支票" cascade="none" fetch="join" constrained="true" />
+  </class>
+  <class name="查询_承兑汇票_托收贴现" schema-action="none" table="视图查询_承兑汇票_托收贴现" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="票据号码" />
+    <property name="出去时间" />
+    <property name="经办人" />
+    <property name="出去经手人" />
+    <property name="返回时间" />
+    <property name="返回方式" />
+    <property name="入款账户" />
+    <property name="返回经手人" />
+    <property name="返回金额" />
+    <one-to-one name="查询_承兑汇票" cascade="none" fetch="join" constrained="true" />
+  </class>
+  <class name="查询_支票_过程结束" schema-action="none" table="视图查询_支票_过程结束" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="票据号码" />
+    <property name="源" />
+    <property name="入款账户" />
+    <property name="凭证摘要" />
+    <property name="日期" />
+    <property name="凭证" />
+    <property name="凭证号" />
+    <one-to-one name="查询_支票" cascade="none" fetch="join" constrained="true" />
+  </class>
+  <class name="查询_承兑汇票_凭证收付" schema-action="none" table="视图查询_承兑汇票_凭证收付" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="收付标志" />
+    <property name="票据号码" />
+    <property name="凭证" />
+    <property name="凭证号" />
+    <property name="凭证摘要" />
+    <property name="日期" />
+    <many-to-one name="查询_承兑汇票" column="承兑汇票" update="false" insert="false" />
+  </class>
+  <class name="查询_支票" schema-action="none" table="视图查询_支票" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="源" />
+    <property name="支票类型" />
+    <property name="票据号码" />
+    <property name="银行账户" />
+    <property name="金额" />
+    <property name="币制" />
+    <property name="备注" />
+    <property name="摘要" />
+    <property name="日期" />
+    <property name="是否作废" />
+    <property name="Submitted" />
+    <one-to-one name="查询_支票_过程在途" cascade="none" fetch="join" constrained="false" />
+    <one-to-one name="查询_支票_过程结束" cascade="none" fetch="join" constrained="false" />
+  </class>
+  <class name="查询_承兑汇票" schema-action="none" table="视图查询_承兑汇票" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="票据号码" />
+    <property name="出票银行" />
+    <property name="承兑期限" />
+    <property name="金额" />
+    <property name="付款人" />
+    <property name="托收贴现" />
+    <property name="备注" />
+    <property name="摘要" />
+    <property name="Submitted" />
+    <one-to-one name="查询_承兑汇票_托收贴现" cascade="none" fetch="join" constrained="false" />
+    <bag name="查询_承兑汇票_凭证收付" inverse="true" cascade="none">
+      <key column="承兑汇票" />
+      <one-to-many class="Hd.Model.Cx.查询_承兑汇票_凭证收付, Hd.Model.Cx" not-found="ignore" />
+    </bag>
+  </class>
+</hibernate-mapping>

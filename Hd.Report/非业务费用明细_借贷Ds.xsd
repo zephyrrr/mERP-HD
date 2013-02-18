@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="非业务费用明细_借贷Ds" targetNamespace="http://tempuri.org/非业务费用明细_借贷Ds.xsd" xmlns:mstns="http://tempuri.org/非业务费用明细_借贷Ds.xsd" xmlns="http://tempuri.org/非业务费用明细_借贷Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="非业务费用明细_借贷Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="非业务费用明细_借贷Ds" msprop:Generator_DataSetName="非业务费用明细_借贷Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="非业务费用明细_借贷" msprop:Generator_UserTableName="非业务费用明细_借贷" msprop:Generator_RowDeletedName="非业务费用明细_借贷RowDeleted" msprop:Generator_RowChangedName="非业务费用明细_借贷RowChanged" msprop:Generator_RowClassName="非业务费用明细_借贷Row" msprop:Generator_RowChangingName="非业务费用明细_借贷RowChanging" msprop:Generator_RowEvArgName="非业务费用明细_借贷RowChangeEvent" msprop:Generator_RowEvHandlerName="非业务费用明细_借贷RowChangeEventHandler" msprop:Generator_TableClassName="非业务费用明细_借贷DataTable" msprop:Generator_TableVarName="table非业务费用明细_借贷" msprop:Generator_RowDeletingName="非业务费用明细_借贷RowDeleting" msprop:Generator_TablePropName="非业务费用明细_借贷">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="入账日期" msprop:Generator_UserColumnName="入账日期" msprop:Generator_ColumnVarNameInTable="column入账日期" msprop:Generator_ColumnPropNameInRow="入账日期" msprop:Generator_ColumnPropNameInTable="入账日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="相关人" msprop:Generator_UserColumnName="相关人" msprop:Generator_ColumnVarNameInTable="column相关人" msprop:Generator_ColumnPropNameInRow="相关人" msprop:Generator_ColumnPropNameInTable="相关人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="简介" msprop:Generator_UserColumnName="简介" msprop:Generator_ColumnVarNameInTable="column简介" msprop:Generator_ColumnPropNameInRow="简介" msprop:Generator_ColumnPropNameInTable="简介Column" type="xs:string" minOccurs="0" />
+              <xs:element name="金额" msprop:Generator_UserColumnName="金额" msprop:Generator_ColumnVarNameInTable="column金额" msprop:Generator_ColumnPropNameInRow="金额" msprop:Generator_ColumnPropNameInTable="金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="预期时间" msprop:Generator_UserColumnName="预期时间" msprop:Generator_ColumnVarNameInTable="column预期时间" msprop:Generator_ColumnPropNameInRow="预期时间" msprop:Generator_ColumnPropNameInTable="预期时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="支付方式" msprop:Generator_UserColumnName="支付方式" msprop:Generator_ColumnVarNameInTable="column支付方式" msprop:Generator_ColumnPropNameInRow="支付方式" msprop:Generator_ColumnPropNameInTable="支付方式Column" type="xs:string" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="凭证号" msprop:Generator_UserColumnName="凭证号" msprop:Generator_ColumnPropNameInRow="凭证号" msprop:Generator_ColumnVarNameInTable="column凭证号" msprop:Generator_ColumnPropNameInTable="凭证号Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

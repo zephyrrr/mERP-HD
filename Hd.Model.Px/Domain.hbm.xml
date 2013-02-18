@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Px" assembly="Hd.Model.Px" xmlns="urn:nhibernate-mapping-2.2">
+  <joined-subclass name="拼箱箱" table="业务备案_拼箱箱" extends="Hd.Model.普通箱, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_拼箱箱_箱" />
+    <property name="查验标志" not-null="true" />
+    <property name="海关查验" not-null="false" />
+    <property name="商检查验" not-null="false" />
+    <property name="提箱地编号" column="提箱地" length="6" />
+    <property name="装货地编号" column="装货地" length="6" />
+    <property name="货代提箱时间要求止" not-null="false" />
+    <property name="提箱时间" not-null="false" />
+    <property name="拉箱时间" not-null="false" />
+    <property name="进港时间" not-null="false" />
+    <property name="装货时间" not-null="false" />
+    <many-to-one name="票" column="票" not-null="true" cascade="none" foreign-key="FK_拼箱箱_拼箱票" />
+    <many-to-one name="提箱地" not-null="false" update="false" insert="false" foreign-key="FK_拼箱箱_提箱地" />
+    <many-to-one name="装货地" update="false" insert="false" foreign-key="FK_拼箱箱_装货地" />
+  </joined-subclass>
+  <joined-subclass name="拼箱票" table="业务备案_拼箱票" extends="Hd.Model.普通票, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_拼箱票_票" />
+    <property name="承运标志" not-null="false" />
+    <property name="操作完全标志" not-null="true" />
+    <property name="离港时间" not-null="false" />
+    <property name="进港地编号" column="进港地" length="6" />
+    <property name="承运人编号" column="承运人" length="6" />
+    <property name="拼箱委托人编号" column="拼箱委托人" length="50" />
+    <property name="抬头" length="50" not-null="false" />
+    <property name="退税时间" not-null="false" />
+    <property name="拼箱提单号" length="50" not-null="false" />
+    <property name="核销单号" length="10" not-null="false" />
+    <property name="通关单号" length="50" not-null="false" />
+    <property name="箱号" update="false" insert="false" formula="(SELECT dbo.Concatenate(DISTINCT b.箱号) FROM dbo.业务备案_拼箱箱 AS a INNER JOIN dbo.视图信息_箱票 AS b ON a.ID = b.ID WHERE b.票 = Id) " />
+    <property name="报关单快照" length="4001" not-null="false" />
+    <property name="报关员" column="报关员" length="10" not-null="false" />
+    <property name="报关公司" length="50" not-null="false" />
+    <property name="海关查验时间" not-null="false" />
+    <property name="商检查验时间" not-null="false" />
+    <property name="放行时间" not-null="false" />
+    <many-to-one name="进港地" update="false" insert="false" foreign-key="FK_拼箱票_进港地" />
+    <many-to-one name="承运人" update="false" insert="false" foreign-key="FK_拼箱票_承运人" />
+    <bag name="箱" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Hd.Model.Px.拼箱箱, Hd.Model.Px" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+</hibernate-mapping>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Jk" assembly="Hd.Model.Jk" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="进口票过程转关标志" table="业务过程_进口票_转关标志" optimistic-lock="version">
+    <id name="ID">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <one-to-one name="票" cascade="none" fetch="join" constrained="true" foreign-key="FK_过程转关标志_进口票" />
+  </class>
+  <class name="Hd.Model.Jk.进口票额外费用, Hd.Model.Jk" table="视图财务过程_进口票_额外费用_委托人" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="额外其他费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="滞箱费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="额外修洗箱费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="额外查验费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="倒箱二次开箱费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="疏港费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="堆存费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="额外指运地其他费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="改舱单费" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="滞报金" precision="19" scale="2" not-null="false" update="false" insert="false" />
+    <property name="小计" precision="19" scale="2" not-null="false" update="false" insert="false" />
+  </class>
+  <class name="Hd.Model.Jk.进口箱滞箱费减免, Hd.Model.Jk" schema-action="none" table="视图查询_业务备案_进口箱" optimistic-lock="version">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="退滞箱费" precision="19" scale="2" not-null="false" />
+    <property name="最终滞箱费" precision="19" scale="2" not-null="false" />
+  </class>
+  <joined-subclass name="进口票" table="业务备案_进口票" extends="Hd.Model.普通票, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_进口票_票" />
+    <property name="滞箱费减免标志" not-null="true" />
+    <property name="承运标志" not-null="true" />
+    <property name="转关标志" not-null="true" />
+    <property name="操作完全标志" not-null="true" />
+    <property name="报关天数" not-null="false" />
+    <property name="通关天数" not-null="false" />
+    <property name="承运超期" not-null="false" />
+    <property name="船名" length="30" />
+    <property name="航次" length="20" />
+    <property name="总金额" precision="19" scale="2" not-null="false" />
+    <property name="币制编号" column="币制" length="3" />
+    <property name="产地" length="20" />
+    <property name="单证齐全时间" not-null="false" />
+    <property name="预计到港时间" not-null="false" />
+    <property name="到港时间" not-null="false" />
+    <property name="卸箱地编号" column="卸箱地" length="6" />
+    <property name="转关指运地编号" column="转关指运地" length="6" />
+    <property name="承运人编号" column="承运人" length="6" />
+    <property name="要求承运天数" not-null="false" />
+    <property name="申报类型" />
+    <property name="注册证书号" length="20" />
+    <property name="换单时间" not-null="false" />
+    <property name="开箱单时间" not-null="false" />
+    <property name="卫生处理时间" not-null="false" />
+    <property name="报检时间" not-null="false" />
+    <property name="商检出证时间" not-null="false" />
+    <property name="商检支票号" length="20" />
+    <property name="报检员编号" column="报检员" length="6" not-null="false" />
+    <property name="商检查验时间" not-null="false" />
+    <property name="查验场地编号" column="查验场地" length="6" not-null="false" />
+    <property name="查验员编号" column="查验员" length="6" not-null="false" />
+    <property name="商检查验箱量" update="false" insert="false" formula="(SELECT COUNT(*) FROM 业务备案_进口箱 A WHERE A.商检查验 &gt; 0 AND A.票 = Id)" />
+    <property name="商检倒箱箱量" update="false" insert="false" formula="(SELECT COUNT(*) FROM 业务备案_进口箱 A WHERE (A.商检查验 = 2 OR A.商检查验 = 3) AND A.票 = Id)" />
+    <property name="报关员编号" column="报关员" length="6" not-null="false" />
+    <property name="放行时间" not-null="false" />
+    <property name="结关时间" not-null="false" />
+    <property name="结汇单交给货主时间" not-null="false" />
+    <property name="结汇单接受人" length="50" />
+    <property name="免箱天数" not-null="false" />
+    <property name="用箱天数" not-null="false" />
+    <property name="预计用箱天数" not-null="false" />
+    <property name="免箱船公司查询时间" not-null="false" />
+    <property name="免箱联系货主时间" not-null="false" />
+    <property name="免箱船公司确认时间" not-null="false" />
+    <property name="滞箱费警示状态" length="50" />
+    <property name="异常情况" length="50" />
+    <property name="结束时间" not-null="false" />
+    <many-to-one name="额外费用" column="Id" update="false" insert="false" />
+    <many-to-one name="币制" update="false" insert="false" foreign-key="FK_进口票_币制" />
+    <many-to-one name="卸箱地" update="false" insert="false" foreign-key="FK_进口票_卸箱地" />
+    <many-to-one name="转关指运地" update="false" insert="false" foreign-key="FK_进口票_转关指运地" />
+    <many-to-one name="承运人" update="false" insert="false" foreign-key="FK_进口票_承运人" />
+    <many-to-one name="报检员" update="false" insert="false" foreign-key="FK_进口票_报检员" />
+    <many-to-one name="查验场地" update="false" insert="false" foreign-key="FK_进口票_查验场地" />
+    <many-to-one name="查验员" update="false" insert="false" foreign-key="FK_进口票_查验员" />
+    <many-to-one name="报关员" update="false" insert="false" foreign-key="FK_进口票_报关员" />
+    <one-to-one name="转关过程" cascade="none" constrained="false" />
+    <bag name="箱" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Hd.Model.Jk.进口箱, Hd.Model.Jk" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+  <joined-subclass name="进口票过程转关标志清关" table="业务过程_进口票_清关" extends="Hd.Model.Jk.进口票过程转关标志, Hd.Model.Jk">
+    <key column="Id" foreign-key="FK_进口票过程转关标志清关_进口票过程转关标志" />
+    <property name="审单中心电子审结时间" not-null="false" />
+    <property name="现场交单时间" not-null="false" />
+    <property name="海关审单时间" not-null="false" />
+    <property name="海关征税时间" not-null="false" />
+    <property name="海关实物放行时间" not-null="false" />
+    <property name="海关查验时间" not-null="false" />
+    <property name="税单交给货主时间" not-null="false" />
+    <property name="税单接受人" length="50" />
+  </joined-subclass>
+  <joined-subclass name="进口箱" table="业务备案_进口箱" extends="Hd.Model.普通箱, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_进口箱_箱" />
+    <property name="海关查验" not-null="false" />
+    <property name="商检查验" not-null="false" />
+    <property name="商检查验标志" not-null="false" />
+    <property name="提箱地编号" column="提箱地" length="6" />
+    <property name="卸货地编号" column="卸货地" length="6" />
+    <property name="还箱地编号" column="还箱地" length="6" />
+    <property name="货代提箱时间要求止" not-null="false" />
+    <property name="货代还箱时间要求止" not-null="false" />
+    <property name="提箱时间" not-null="false" />
+    <property name="拉箱时间" not-null="false" />
+    <property name="验封时间" not-null="false" />
+    <property name="还箱时间" not-null="false" />
+    <property name="卸货时间" not-null="false" />
+    <property name="最终免箱天数" not-null="false" />
+    <property name="初始滞箱费" precision="19" scale="2" not-null="false" />
+    <many-to-one name="票" column="票" not-null="true" cascade="none" foreign-key="FK_进口箱_进口票" />
+    <many-to-one name="提箱地" not-null="false" update="false" insert="false" foreign-key="FK_进口箱_提箱地" />
+    <many-to-one name="卸货地" update="false" insert="false" foreign-key="FK_进口箱_卸货地" />
+    <many-to-one name="还箱地" update="false" insert="false" foreign-key="FK_进口箱_还箱地" />
+    <many-to-one name="进口箱滞箱费减免" column="Id" not-null="true" update="false" insert="false" />
+  </joined-subclass>
+  <joined-subclass name="进口票过程转关标志转关" table="业务过程_进口票_转关" extends="Hd.Model.Jk.进口票过程转关标志, Hd.Model.Jk">
+    <key column="Id" foreign-key="FK_进口票过程转关标志转关_进口票过程转关标志" />
+    <property name="白卡排车时间" not-null="false" />
+    <property name="口岸海关申报时间" not-null="false" />
+    <property name="转关联系单号" length="50" />
+    <property name="指运地报关单号" length="50" />
+    <property name="指运地报关时间" not-null="false" />
+    <property name="指运地海关查验时间" not-null="false" />
+    <property name="指运地查验场地编号" column="指运地查验场地" length="6" not-null="false" />
+    <property name="指运地结关时间" not-null="false" />
+    <many-to-one name="指运地查验场地" update="false" insert="false" foreign-key="FK_进口票_指运地查验场地" />
+  </joined-subclass>
+</hibernate-mapping>

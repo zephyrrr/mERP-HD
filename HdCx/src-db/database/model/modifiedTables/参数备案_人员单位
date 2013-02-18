@@ -1,0 +1,2 @@
+alter table 参数备案_人员单位
+add WebUserName nvarchar(50)

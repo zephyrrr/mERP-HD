@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model" assembly="Hd.Model.Base" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Hd.Model.凭证费用明细, Hd.Model.Base" table="财务_凭证费用明细" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="收付标志" not-null="true" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="费用项编号" column="费用项" length="3" not-null="true" />
+    <property name="凭证费用类别编号" column="凭证费用类别" not-null="false" />
+    <property name="业务类型编号" column="业务类型" not-null="false" />
+    <property name="备注" length="200" not-null="false" />
+    <property name="结算期限" not-null="false" />
+    <property name="支付方式要求" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="凭证" not-null="true" cascade="none" foreign-key="FK_凭证费用明细_凭证" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_凭证费用明细_相关人" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_凭证费用明细_费用项" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_凭证费用明细_费用类别" />
+    <bag name="费用" inverse="true" cascade="none">
+      <key column="凭证费用明细" />
+      <one-to-many class="Hd.Model.费用, Hd.Model.Base" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.费用理论值信息, Hd.Model.Base" table="参数备案_费用理论值信息" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="序号" not-null="true" />
+    <property name="条件" length="4000" not-null="true" />
+    <property name="结果" length="4000" not-null="false" />
+    <property name="备注" length="255" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="合同费用项" not-null="true" cascade="none" foreign-key="FK_费用理论值信息_合同费用项" />
+  </class>
+  <class name="Hd.Model.角色用途, Hd.Model.Base" table="信息_角色用途" optimistic-lock="version">
+    <id name="代码">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="类型" length="50" not-null="true" />
+    <property name="客户" not-null="true" />
+    <property name="员工" not-null="true" />
+    <property name="报关组" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Hd.Model.费用, Hd.Model.Base" table="财务_费用" discriminator-value="0" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <discriminator column="费用类型" type="Int32" />
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="费用类别编号" column="费用类别" not-null="false" />
+    <property name="费用项编号" column="费用项" length="3" not-null="false" />
+    <property name="收付标志" not-null="false" />
+    <property name="相关人编号" column="相关人" length="6" not-null="false" />
+    <property name="金额" precision="19" scale="2" not-null="false" />
+    <property name="备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="费用类别" not-null="false" update="false" insert="false" foreign-key="FK_费用_费用类别" />
+    <many-to-one name="费用实体" not-null="true" index="Idx_费用_费用实体" cascade="none" foreign-key="FK_费用_费用实体" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_费用_费用项" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_费用_相关人" />
+    <many-to-one name="对账单" not-null="false" cascade="none" foreign-key="FK_费用_对账单" />
+    <many-to-one name="凭证费用明细" not-null="false" cascade="none" foreign-key="FK_费用_凭证费用明细" />
+  </class>
+  <class name="Hd.Model.应收应付源, Hd.Model.Base" table="财务_应收应付源" abstract="true" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="Submitted" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <bag name="应收应付款" inverse="true" cascade="none">
+      <key column="应收应付源" />
+      <one-to-many class="Hd.Model.应收应付款, Hd.Model.Base" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.银行账户, Hd.Model.Base" table="参数备案_银行账户" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="币制编号" column="币制" length="3" not-null="true" />
+    <property name="账号" length="50" not-null="true" />
+    <property name="简称" length="10" not-null="true" unique="true" unique-key="UK_银行账户_简称" />
+    <property name="开户行" length="50" not-null="true" />
+    <property name="开户时间" not-null="true" />
+    <property name="账户类型" not-null="true" />
+    <property name="户主" length="50" not-null="true" />
+    <property name="备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="币制" update="false" insert="false" foreign-key="FK_银行账户_币制" />
+  </class>
+  <class name="Hd.Model.合同费用项, Hd.Model.Base" table="参数备案_合同费用项" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="费用项编号" column="费用项" length="3" not-null="true" />
+    <property name="备注" length="50" not-null="false" />
+    <property name="是否生成实际费用" not-null="true" />
+    <property name="是否空值全部生成" not-null="true" />
+    <property name="是否判断相关人" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="费用项" not-null="true" update="false" insert="false" foreign-key="FK_合同费用项_费用项" />
+    <bag name="费用理论值" inverse="true" cascade="none" order-by="序号">
+      <key column="合同费用项" />
+      <one-to-many class="Hd.Model.费用理论值信息, Hd.Model.Base" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.应收应付款, Hd.Model.Base" table="财务_应收应付款" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="收付标志" not-null="true" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="费用项编号" column="费用项" length="3" not-null="true" />
+    <property name="日期" not-null="true" />
+    <property name="结算期限" not-null="true" />
+    <property name="业务类型编号" column="业务类型" not-null="false" />
+    <property name="备注" length="200" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_应收应付款_相关人" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_应收应付款_费用项" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_应收应付款_费用类别" />
+    <many-to-one name="应收应付源" not-null="true" cascade="none" foreign-key="FK_应收应付款_应收应付源" />
+  </class>
+  <class name="Hd.Model.凭证收支明细, Hd.Model.Base" table="财务_凭证收支明细" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="收付标志" not-null="true" />
+    <property name="收付款方式" not-null="true" />
+    <property name="出票银行" length="50" not-null="false" />
+    <property name="承兑期限" not-null="false" />
+    <property name="付款人编号" column="付款人" length="6" not-null="false" />
+    <property name="金额" length="19" precision="19" scale="2" not-null="true" />
+    <property name="票据号码" length="50" />
+    <property name="银行账户编号" column="银行账户" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="付款人" update="false" insert="false" foreign-key="FK_凭证承兑汇票_付款人" />
+    <many-to-one name="凭证" not-null="true" cascade="none" foreign-key="FK_凭证收支明细_凭证" />
+    <many-to-one name="银行账户" not-null="false" update="false" insert="false" foreign-key="FK_凭证收支明细_银行账户" />
+  </class>
+  <class name="Hd.Model.人员, Hd.Model.Base" table="参数备案_人员单位" optimistic-lock="version">
+    <cache usage="nonstrict-read-write" />
+    <id name="编号" length="6">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="简称" length="20" not-null="true" unique="true" unique-key="UK_人员_简称" />
+    <property name="全称" length="50" not-null="true" unique="true" unique-key="UK_人员_全称" />
+    <property name="角色用途" length="100" />
+    <property name="业务类型" length="100" />
+    <property name="字母简称" length="20" />
+    <property name="联系方式" length="200" />
+    <property name="所在地" length="20" />
+    <property name="备注" length="200" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Hd.Model.费用项, Hd.Model.Base" table="参数备案_费用项" optimistic-lock="version">
+    <id name="编号" length="3">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="名称" length="10" not-null="true" unique="true" unique-key="UK_费用项_名称" />
+    <property name="应收应付类型" not-null="false" />
+    <property name="收入类别" />
+    <property name="支出类别" />
+    <property name="票" not-null="true" />
+    <property name="箱" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Hd.Model.费用类别, Hd.Model.Base" table="信息_费用类别" optimistic-lock="version">
+    <id name="代码">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="类型" length="50" not-null="false" />
+    <property name="大类" length="50" not-null="false" />
+    <property name="小类" length="50" not-null="false" />
+    <property name="收" not-null="false" />
+    <property name="付" not-null="false" />
+    <property name="收入类别" not-null="false" />
+    <property name="支出类别" not-null="false" />
+    <property name="前缀" length="2" not-null="false" />
+    <property name="业务" not-null="false" />
+    <property name="非业务" not-null="false" />
+    <property name="代码类型名" length="50" not-null="false" />
+    <property name="费用实体类型" not-null="false" />
+    <property name="业务类型" not-null="false" />
+    <property name="费用类别标志" column="费用类别" not-null="false" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Hd.Model.费用实体, Hd.Model.Base" table="财务_费用实体" polymorphism="explicit" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="编号" length="30" not-null="true" unique="true" unique-key="UK_费用实体_编号" index="Idx_费用实体_编号" />
+    <property name="费用实体类型编号" column="费用实体类型" not-null="true" />
+    <property name="Submitted" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="费用实体类型" not-null="false" update="false" insert="false" foreign-key="FK_费用实体_费用类别" />
+    <bag name="费用" inverse="true" cascade="none">
+      <key column="费用实体" />
+      <one-to-many class="Hd.Model.费用, Hd.Model.Base" not-found="ignore" />
+    </bag>
+  </class>
+  <class name="Hd.Model.币制, Hd.Model.Base" schema-action="none" table="参数备案_币制" optimistic-lock="version">
+    <id name="代码" length="3">
+      <generator class="assigned" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="名称" length="10" not-null="true" unique="true" unique-key="UK_币制_名称" />
+    <property name="符号" length="3" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <subclass name="Hd.Model.非业务费用, Hd.Model.Base" discriminator-value="11" extends="Hd.Model.费用, Hd.Model.Base">
+    <many-to-one name="非业务费用实体" column="费用实体" not-null="false" update="false" insert="false" />
+  </subclass>
+  <union-subclass name="Hd.Model.对账单, Hd.Model.Base" table="财务_对账单" extends="Hd.Model.应收应付源, Hd.Model.Base">
+    <property name="对账单类型" not-null="true" />
+    <property name="编号" length="8" not-null="true" unique="true" unique-key="UK_对账单_编号" index="Idx_对账单_编号" />
+    <property name="相关人编号" column="相关人" length="6" not-null="false" />
+    <property name="收付标志" not-null="true" />
+    <property name="备注" length="500" />
+    <property name="送出时间" />
+    <property name="结束日期" />
+    <property name="费用项编号" column="费用项" length="3" not-null="false" />
+    <property name="起始日期" />
+    <property name="关账日期" />
+    <property name="结算期限" />
+    <property name="金额" precision="19" scale="2" not-null="false" />
+    <property name="业务类型编号" column="业务类型" not-null="false" />
+    <property name="凭证号" length="8" />
+    <many-to-one name="相关人" not-null="false" update="false" insert="false" foreign-key="FK_对账单_相关人" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_对账单_费用项" />
+    <many-to-one name="业务类型" not-null="false" update="false" insert="false" foreign-key="FK_对账单_业务类型" />
+    <many-to-one name="凭证" not-null="false" cascade="none" foreign-key="FK_对账单_凭证" />
+    <bag name="费用" inverse="true" cascade="none">
+      <key column="对账单" />
+      <one-to-many class="Hd.Model.费用, Hd.Model.Base" not-found="ignore" />
+    </bag>
+  </union-subclass>
+  <union-subclass name="Hd.Model.凭证, Hd.Model.Base" table="财务_凭证" extends="Hd.Model.应收应付源, Hd.Model.Base">
+    <property name="凭证类别" not-null="true" />
+    <property name="自动手工标志" not-null="true" />
+    <property name="凭证号" length="8" not-null="true" />
+    <property name="日期" not-null="true" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="审核状态" not-null="true" />
+    <property name="收支状态" not-null="true" />
+    <property name="是否作废" not-null="true" />
+    <property name="备注" length="200" />
+    <property name="摘要" length="200" />
+    <property name="会计金额" precision="19" scale="2" not-null="false" />
+    <property name="审核人编号" column="审核人" length="6" />
+    <property name="会计编号" column="会计" length="6" />
+    <property name="出纳编号" column="出纳" length="6" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_凭证_相关人" />
+    <many-to-one name="审核人" update="false" insert="false" foreign-key="FK_凭证_审核人" />
+    <many-to-one name="会计" update="false" insert="false" foreign-key="FK_凭证_会计" />
+    <many-to-one name="出纳" update="false" insert="false" foreign-key="FK_凭证_出纳" />
+    <!----><component name="金额">
+            <property name="币制编号" column = "币制" length="3" not-null="false"/>
+            <property name="数额" column = "数额" not-null="false"/>
+            <many-to-one name="币制" column = "币制" update="false" insert="false" foreign-key="FK_凭证_币制"/>
+            </component>
+    <bag name="凭证费用明细" inverse="true" cascade="none">
+      <key column="凭证" />
+      <one-to-many class="Hd.Model.凭证费用明细, Hd.Model.Base" not-found="ignore" />
+    </bag>
+    <bag name="凭证收支明细" inverse="true" cascade="none">
+      <key column="凭证" />
+      <one-to-many class="Hd.Model.凭证收支明细, Hd.Model.Base" not-found="ignore" />
+    </bag>
+  </union-subclass>
+</hibernate-mapping>

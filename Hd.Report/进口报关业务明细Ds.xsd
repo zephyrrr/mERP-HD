@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="进口报关业务明细Ds" targetNamespace="http://tempuri.org/进口报关业务明细Ds.xsd" xmlns:mstns="http://tempuri.org/进口报关业务明细Ds.xsd" xmlns="http://tempuri.org/进口报关业务明细Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="进口报关业务明细Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="进口报关业务明细Ds" msprop:Generator_DataSetName="进口报关业务明细Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="进口报关业务明细" msprop:Generator_UserTableName="进口报关业务明细" msprop:Generator_RowDeletedName="进口报关业务明细RowDeleted" msprop:Generator_RowChangedName="进口报关业务明细RowChanged" msprop:Generator_RowClassName="进口报关业务明细Row" msprop:Generator_RowChangingName="进口报关业务明细RowChanging" msprop:Generator_RowEvArgName="进口报关业务明细RowChangeEvent" msprop:Generator_RowEvHandlerName="进口报关业务明细RowChangeEventHandler" msprop:Generator_TableClassName="进口报关业务明细DataTable" msprop:Generator_TableVarName="table进口报关业务明细" msprop:Generator_RowDeletingName="进口报关业务明细RowDeleting" msprop:Generator_TablePropName="进口报关业务明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="委托人" msprop:Generator_UserColumnName="委托人" msprop:Generator_ColumnPropNameInRow="委托人" msprop:Generator_ColumnVarNameInTable="column委托人" msprop:Generator_ColumnPropNameInTable="委托人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="自编号" msprop:Generator_UserColumnName="自编号" msprop:Generator_ColumnPropNameInRow="自编号" msprop:Generator_ColumnVarNameInTable="column自编号" msprop:Generator_ColumnPropNameInTable="自编号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="提单号" msprop:Generator_UserColumnName="提单号" msprop:Generator_ColumnPropNameInRow="提单号" msprop:Generator_ColumnVarNameInTable="column提单号" msprop:Generator_ColumnPropNameInTable="提单号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="货物类别" msprop:Generator_UserColumnName="货物类别" msprop:Generator_ColumnPropNameInRow="货物类别" msprop:Generator_ColumnVarNameInTable="column货物类别" msprop:Generator_ColumnPropNameInTable="货物类别Column" type="xs:string" minOccurs="0" />
+              <xs:element name="箱量" msprop:Generator_UserColumnName="箱量" msprop:Generator_ColumnPropNameInRow="箱量" msprop:Generator_ColumnVarNameInTable="column箱量" msprop:Generator_ColumnPropNameInTable="箱量Column" type="xs:int" minOccurs="0" />
+              <xs:element name="通关类别" msprop:Generator_UserColumnName="通关类别" msprop:Generator_ColumnPropNameInRow="通关类别" msprop:Generator_ColumnVarNameInTable="column通关类别" msprop:Generator_ColumnPropNameInTable="通关类别Column" type="xs:string" minOccurs="0" />
+              <xs:element name="委托时间" msprop:Generator_UserColumnName="委托时间" msprop:Generator_ColumnPropNameInRow="委托时间" msprop:Generator_ColumnVarNameInTable="column委托时间" msprop:Generator_ColumnPropNameInTable="委托时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="到港时间" msprop:Generator_UserColumnName="到港时间" msprop:Generator_ColumnPropNameInRow="到港时间" msprop:Generator_ColumnVarNameInTable="column到港时间" msprop:Generator_ColumnPropNameInTable="到港时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="单证晚到" msprop:Generator_UserColumnName="单证晚到" msprop:Generator_ColumnPropNameInRow="单证晚到" msprop:Generator_ColumnVarNameInTable="column单证晚到" msprop:Generator_ColumnPropNameInTable="单证晚到Column" type="xs:int" minOccurs="0" />
+              <xs:element name="报关时间" msprop:Generator_UserColumnName="报关时间" msprop:Generator_ColumnPropNameInRow="报关时间" msprop:Generator_ColumnVarNameInTable="column报关时间" msprop:Generator_ColumnPropNameInTable="报关时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="放行时间" msprop:Generator_UserColumnName="放行时间" msprop:Generator_ColumnPropNameInRow="放行时间" msprop:Generator_ColumnVarNameInTable="column放行时间" msprop:Generator_ColumnPropNameInTable="放行时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="通关天数" msprop:Generator_UserColumnName="通关天数" msprop:Generator_ColumnPropNameInRow="通关天数" msprop:Generator_ColumnVarNameInTable="column通关天数" msprop:Generator_ColumnPropNameInTable="通关天数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="开始时间" msprop:Generator_UserColumnName="开始时间" msprop:Generator_ColumnPropNameInRow="开始时间" msprop:Generator_ColumnVarNameInTable="column开始时间" msprop:Generator_ColumnPropNameInTable="开始时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="结束时间" msprop:Generator_UserColumnName="结束时间" msprop:Generator_ColumnPropNameInRow="结束时间" msprop:Generator_ColumnVarNameInTable="column结束时间" msprop:Generator_ColumnPropNameInTable="结束时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="承运超期" msprop:Generator_UserColumnName="承运超期" msprop:Generator_ColumnPropNameInRow="承运超期" msprop:Generator_ColumnVarNameInTable="column承运超期" msprop:Generator_ColumnPropNameInTable="承运超期Column" type="xs:int" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="滞箱费减免标志" msprop:Generator_UserColumnName="滞箱费减免标志" msprop:Generator_ColumnPropNameInRow="滞箱费减免标志" msprop:Generator_ColumnVarNameInTable="column滞箱费减免标志" msprop:Generator_ColumnPropNameInTable="滞箱费减免标志Column" type="xs:boolean" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

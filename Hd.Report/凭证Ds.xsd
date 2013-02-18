@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="凭证Ds" targetNamespace="http://tempuri.org/付款凭证Ds.xsd" xmlns:mstns="http://tempuri.org/付款凭证Ds.xsd" xmlns="http://tempuri.org/付款凭证Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Hd_AConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="Hd_AConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Hd.Report.Properties.Settings.GlobalReference.Default.Hd_AConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="凭证Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="凭证Ds" msprop:Generator_DataSetName="凭证Ds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="凭证" msprop:Generator_UserTableName="凭证" msprop:Generator_RowDeletedName="凭证RowDeleted" msprop:Generator_RowChangedName="凭证RowChanged" msprop:Generator_RowClassName="凭证Row" msprop:Generator_RowChangingName="凭证RowChanging" msprop:Generator_RowEvArgName="凭证RowChangeEvent" msprop:Generator_RowEvHandlerName="凭证RowChangeEventHandler" msprop:Generator_TableClassName="凭证DataTable" msprop:Generator_TableVarName="table凭证" msprop:Generator_RowDeletingName="凭证RowDeleting" msprop:Generator_TablePropName="凭证">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="凭证类别" msdata:Caption="凭证号" msprop:Generator_UserColumnName="凭证类别" msprop:Generator_ColumnPropNameInRow="凭证类别" msprop:Generator_ColumnVarNameInTable="column凭证类别" msprop:Generator_ColumnPropNameInTable="凭证类别Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="凭证号" msprop:Generator_UserColumnName="凭证号" msprop:Generator_ColumnVarNameInTable="column凭证号" msprop:Generator_ColumnPropNameInRow="凭证号" msprop:Generator_ColumnPropNameInTable="凭证号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="日期" msprop:Generator_UserColumnName="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnPropNameInTable="日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="币制编号" msdata:Caption="相关人编号" msprop:Generator_UserColumnName="币制编号" msprop:Generator_ColumnPropNameInRow="币制编号" msprop:Generator_ColumnVarNameInTable="column币制编号" msprop:Generator_ColumnPropNameInTable="币制编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="相关人编号" msprop:Generator_UserColumnName="相关人编号" msprop:Generator_ColumnVarNameInTable="column相关人编号" msprop:Generator_ColumnPropNameInRow="相关人编号" msprop:Generator_ColumnPropNameInTable="相关人编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="审核人编号" msdata:Caption="会计" msprop:Generator_UserColumnName="审核人编号" msprop:Generator_ColumnVarNameInTable="column审核人编号" msprop:Generator_ColumnPropNameInRow="审核人编号" msprop:Generator_ColumnPropNameInTable="审核人编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="出纳编号" msdata:Caption="会计" msprop:Generator_UserColumnName="出纳编号" msprop:Generator_ColumnVarNameInTable="column出纳编号" msprop:Generator_ColumnPropNameInRow="出纳编号" msprop:Generator_ColumnPropNameInTable="出纳编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="会计编号" msprop:Generator_UserColumnName="会计编号" msprop:Generator_ColumnVarNameInTable="column会计编号" msprop:Generator_ColumnPropNameInRow="会计编号" msprop:Generator_ColumnPropNameInTable="会计编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="数额" msprop:Generator_UserColumnName="数额" msprop:Generator_ColumnVarNameInTable="column数额" msprop:Generator_ColumnPropNameInRow="数额" msprop:Generator_ColumnPropNameInTable="数额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="大写金额" msprop:Generator_UserColumnName="大写金额" msprop:Generator_ColumnVarNameInTable="column大写金额" msprop:Generator_ColumnPropNameInRow="大写金额" msprop:Generator_ColumnPropNameInTable="大写金额Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="凭证归属" msprop:Generator_UserColumnName="凭证归属" msprop:Generator_ColumnPropNameInRow="凭证归属" msprop:Generator_ColumnVarNameInTable="column凭证归属" msprop:Generator_ColumnPropNameInTable="凭证归属Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="凭证费用明细" msprop:Generator_UserTableName="凭证费用明细" msprop:Generator_RowDeletedName="凭证费用明细RowDeleted" msprop:Generator_RowChangedName="凭证费用明细RowChanged" msprop:Generator_RowClassName="凭证费用明细Row" msprop:Generator_RowChangingName="凭证费用明细RowChanging" msprop:Generator_RowEvArgName="凭证费用明细RowChangeEvent" msprop:Generator_RowEvHandlerName="凭证费用明细RowChangeEventHandler" msprop:Generator_TableClassName="凭证费用明细DataTable" msprop:Generator_TableVarName="table凭证费用明细" msprop:Generator_RowDeletingName="凭证费用明细RowDeleting" msprop:Generator_TablePropName="凭证费用明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="费用项编号" msdata:Caption="相关人编号" msprop:Generator_UserColumnName="费用项编号" msprop:Generator_ColumnPropNameInRow="费用项编号" msprop:Generator_ColumnVarNameInTable="column费用项编号" msprop:Generator_ColumnPropNameInTable="费用项编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="相关人编号" msprop:Generator_UserColumnName="相关人编号" msprop:Generator_ColumnPropNameInRow="相关人编号" msprop:Generator_ColumnVarNameInTable="column相关人编号" msprop:Generator_ColumnPropNameInTable="相关人编号Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="付款金额" msdata:Caption="收款金额" msprop:Generator_UserColumnName="付款金额" msprop:Generator_ColumnPropNameInRow="付款金额" msprop:Generator_ColumnVarNameInTable="column付款金额" msprop:Generator_ColumnPropNameInTable="付款金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="收款金额" msprop:Generator_UserColumnName="收款金额" msprop:Generator_ColumnPropNameInRow="收款金额" msprop:Generator_ColumnVarNameInTable="column收款金额" msprop:Generator_ColumnPropNameInTable="收款金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="凭证号" msprop:Generator_UserColumnName="凭证号" msprop:Generator_ColumnPropNameInRow="凭证号" msprop:Generator_ColumnVarNameInTable="column凭证号" msprop:Generator_ColumnPropNameInTable="凭证号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="凭证费用类别" msprop:Generator_UserColumnName="凭证费用类别" msprop:Generator_ColumnPropNameInRow="凭证费用类别" msprop:Generator_ColumnVarNameInTable="column凭证费用类别" msprop:Generator_ColumnPropNameInTable="凭证费用类别Column" type="xs:string" minOccurs="0" />
+              <xs:element name="业务类型" msprop:Generator_UserColumnName="业务类型" msprop:Generator_ColumnPropNameInRow="业务类型" msprop:Generator_ColumnVarNameInTable="column业务类型" msprop:Generator_ColumnPropNameInTable="业务类型Column" type="xs:string" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="收付标志" msprop:Generator_UserColumnName="收付标志" msprop:Generator_ColumnVarNameInTable="column收付标志" msprop:Generator_ColumnPropNameInRow="收付标志" msprop:Generator_ColumnPropNameInTable="收付标志Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="凭证收支明细" msprop:Generator_UserTableName="凭证收支明细" msprop:Generator_RowDeletedName="凭证收支明细RowDeleted" msprop:Generator_RowChangedName="凭证收支明细RowChanged" msprop:Generator_RowClassName="凭证收支明细Row" msprop:Generator_RowChangingName="凭证收支明细RowChanging" msprop:Generator_RowEvArgName="凭证收支明细RowChangeEvent" msprop:Generator_RowEvHandlerName="凭证收支明细RowChangeEventHandler" msprop:Generator_TableClassName="凭证收支明细DataTable" msprop:Generator_TableVarName="table凭证收支明细" msprop:Generator_RowDeletingName="凭证收支明细RowDeleting" msprop:Generator_TablePropName="凭证收支明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="收付款方式" msprop:Generator_UserColumnName="收付款方式" msprop:Generator_ColumnPropNameInRow="收付款方式" msprop:Generator_ColumnVarNameInTable="column收付款方式" msprop:Generator_ColumnPropNameInTable="收付款方式Column" type="xs:string" minOccurs="0" />
+              <xs:element name="承兑期限" msprop:Generator_UserColumnName="承兑期限" msprop:Generator_ColumnPropNameInRow="承兑期限" msprop:Generator_ColumnVarNameInTable="column承兑期限" msprop:Generator_ColumnPropNameInTable="承兑期限Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="票据号码" msprop:Generator_UserColumnName="票据号码" msprop:Generator_ColumnPropNameInRow="票据号码" msprop:Generator_ColumnVarNameInTable="column票据号码" msprop:Generator_ColumnPropNameInTable="票据号码Column" type="xs:string" minOccurs="0" />
+              <xs:element name="银行账户" msprop:Generator_UserColumnName="银行账户" msprop:Generator_ColumnPropNameInRow="银行账户" msprop:Generator_ColumnVarNameInTable="column银行账户" msprop:Generator_ColumnPropNameInTable="银行账户Column" type="xs:string" minOccurs="0" />
+              <xs:element name="收款金额" msprop:Generator_UserColumnName="收款金额" msprop:Generator_ColumnPropNameInRow="收款金额" msprop:Generator_ColumnVarNameInTable="column收款金额" msprop:Generator_ColumnPropNameInTable="收款金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="付款金额" msprop:Generator_UserColumnName="付款金额" msprop:Generator_ColumnPropNameInRow="付款金额" msprop:Generator_ColumnVarNameInTable="column付款金额" msprop:Generator_ColumnPropNameInTable="付款金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="付款人" msprop:Generator_UserColumnName="付款人" msprop:Generator_ColumnPropNameInRow="付款人" msprop:Generator_ColumnVarNameInTable="column付款人" msprop:Generator_ColumnPropNameInTable="付款人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="出票银行" msprop:Generator_UserColumnName="出票银行" msprop:Generator_ColumnPropNameInRow="出票银行" msprop:Generator_ColumnVarNameInTable="column出票银行" msprop:Generator_ColumnPropNameInTable="出票银行Column" type="xs:string" minOccurs="0" />
+              <xs:element name="凭证号" msprop:Generator_UserColumnName="凭证号" msprop:Generator_ColumnPropNameInRow="凭证号" msprop:Generator_ColumnVarNameInTable="column凭证号" msprop:Generator_ColumnPropNameInTable="凭证号Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="凭证_凭证费用明细" msdata:parent="凭证" msdata:child="凭证费用明细" msdata:parentkey="凭证号" msdata:childkey="凭证号" msprop:Generator_UserRelationName="凭证_凭证费用明细" msprop:Generator_RelationVarName="relation凭证_凭证费用明细" msprop:Generator_UserChildTable="凭证费用明细" msprop:Generator_UserParentTable="凭证" msprop:Generator_ParentPropName="凭证Row" msprop:Generator_ChildPropName="Get凭证费用明细Rows" />
+      <msdata:Relationship name="凭证_凭证收支明细" msdata:parent="凭证" msdata:child="凭证收支明细" msdata:parentkey="凭证号" msdata:childkey="凭证号" msprop:Generator_UserRelationName="凭证_凭证收支明细" msprop:Generator_RelationVarName="relation凭证_凭证收支明细" msprop:Generator_UserChildTable="凭证收支明细" msprop:Generator_UserParentTable="凭证" msprop:Generator_ParentPropName="凭证Row" msprop:Generator_ChildPropName="Get凭证收支明细Rows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

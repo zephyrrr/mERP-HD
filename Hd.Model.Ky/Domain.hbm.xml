@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Ky" assembly="Hd.Model.Ky" xmlns="urn:nhibernate-mapping-2.2">
+  <joined-subclass name="空运票" table="业务备案_空运票" extends="Hd.Model.普通票, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_空运票_票" />
+    <property name="起飞机场编号" column="起飞机场" length="6" />
+    <property name="目的机场编号" column="目的机场" length="6" />
+    <property name="提货地编号" column="提货地" length="6" />
+    <property name="承运人编号" column="承运人" length="6" />
+    <property name="收货人编号" column="收货人" length="6" />
+    <property name="起飞时间" not-null="false" />
+    <property name="到达时间" not-null="false" />
+    <property name="特殊情况" not-null="false" />
+    <many-to-one name="起飞机场" update="false" insert="false" foreign-key="FK_空运票_起飞机场" />
+    <many-to-one name="目的机场" update="false" insert="false" foreign-key="FK_空运票_目的机场" />
+    <many-to-one name="提货地" update="false" insert="false" foreign-key="FK_空运票_提货地" />
+    <many-to-one name="承运人" update="false" insert="false" foreign-key="FK_空运票_承运人" />
+    <many-to-one name="收货人" update="false" insert="false" foreign-key="FK_空运票_收货人" />
+    <bag name="箱" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Hd.Model.Ky.空运箱, Hd.Model.Ky" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+  <joined-subclass name="空运箱" table="业务备案_空运箱" extends="Hd.Model.普通箱, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_空运箱_箱" />
+    <many-to-one name="票" column="票" not-null="true" cascade="none" foreign-key="FK_空运箱_空运票" />
+  </joined-subclass>
+</hibernate-mapping>

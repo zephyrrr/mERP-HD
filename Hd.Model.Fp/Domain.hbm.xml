@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Fp" assembly="Hd.Model.Fp" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Hd.Model.Fp.成本发票明细, Hd.Model.Fp" table="财务_成本发票_明细" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="发票账户编号" column="发票账户" not-null="true" />
+    <property name="入账日期" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="成本发票" not-null="true" cascade="none" foreign-key="FK_成本发票明细_成本发票" />
+    <many-to-one name="发票账户" not-null="false" update="false" insert="false" foreign-key="FK_成本发票_发票账户" />
+  </class>
+  <class name="发票账户" table="参数备案_发票账户" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="简称" length="10" not-null="true" unique="true" unique-key="UK_发票账户_简称" />
+    <property name="全称" length="50" not-null="true" />
+    <property name="简介" length="500" />
+    <property name="备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <joined-subclass name="成本发票" table="财务_成本发票" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_成本发票_费用实体" />
+    <property name="买入日期" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="备注" length="500" />
+    <property name="入账金额" not-null="true" />
+    <bag name="成本发票明细" inverse="true" cascade="none">
+      <key column="成本发票" />
+      <one-to-many class="Hd.Model.Fp.成本发票明细, Hd.Model.Fp" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+  <joined-subclass name="发票" table="财务_发票" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_发票_费用实体" />
+    <property name="票据号码" length="50" not-null="true" unique="true" unique-key="UK_发票_票据号码" index="Idx_发票_票据号码" />
+    <property name="买入时间" not-null="true" />
+    <property name="发票账户编号" column="发票账户" not-null="true" />
+    <property name="日期" />
+    <property name="单位" length="50" not-null="false" />
+    <property name="金额" precision="19" scale="2" not-null="false" />
+    <property name="相关人编号" column="相关人" length="6" not-null="false" />
+    <property name="开票类别付" not-null="false" />
+    <property name="开票类别收" not-null="false" />
+    <property name="对账单" length="50" />
+    <property name="内容" length="500" />
+    <property name="备注" length="500" />
+    <property name="入账日期" />
+    <property name="是否作废" not-null="true" />
+    <many-to-one name="发票账户" not-null="true" update="false" insert="false" foreign-key="FK_发票_发票账户" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_发票_相关人" />
+  </joined-subclass>
+</hibernate-mapping>

@@ -1,0 +1,1602 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E67FF6EE-1A80-4986-B8F4-442934BC671A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hd.Report</RootNamespace>
+    <AssemblyName>Hd.Report</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/hdgl.hdbb/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Support\CrystalReport\2008\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Support\CrystalReport\2008\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Support\CrystalReport\2008\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Support\CrystalReport\2008\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Controller" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Report" />
+    <Reference Include="Feng.View" />
+    <Reference Include="Feng.Windows.Application, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Feng\Reference\Feng.Windows.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportPrint.cs" />
+    <Compile Include="ReportProcess.cs" />
+    <Compile Include="业务应付款月报表_其它.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应付款月报表_其它.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应付款月报表_内贸出港.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应付款月报表_内贸出港.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应付款月报表_总表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应付款月报表_总表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应付款月报表_进口报关.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应付款月报表_进口报关.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应收应付款_总表Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应收应付款_总表Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="业务应收应付款表Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应收应付款表Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="业务应收款月报表_其它.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应收款月报表_其它.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应收款月报表_内贸出港.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应收款月报表_内贸出港.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应收款月报表_总表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应收款月报表_总表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务应收款月报表_进口报关.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务应收款月报表_进口报关.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预估.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预估.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预估表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预估表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预估表Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预估表Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="业务盈亏预估表_其他业务.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预估表_其他业务.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预估表_内贸出港.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预估表_内贸出港.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预估表_进口报表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预估表_进口报表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预计Ds.cs">
+      <DependentUpon>业务盈亏预计Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="业务盈亏预计Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>业务盈亏预计Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="他人投资公司明细.cs">
+      <DependentUpon>他人投资公司明细.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="修洗箱费.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>修洗箱费.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="修洗箱费Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>修洗箱费Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="借贷款明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>借贷款明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="其它开支明细Ds.cs">
+      <DependentUpon>其它开支明细Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="其它开支明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>其它开支明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="其它开支明细.cs">
+      <DependentUpon>其它开支明细.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="他人投资公司_总额投资明细.cs">
+      <DependentUpon>他人投资公司_总额投资明细.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="他人投资公司_本月投资增减明细.cs">
+      <DependentUpon>他人投资公司_本月投资增减明细.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="内贸结算明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>内贸结算明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="内贸结算明细Ds.cs">
+      <DependentUpon>内贸结算明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="内贸结算明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>内贸结算明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="内贸结算明细_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>内贸结算明细_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="内贸结算明细_5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>内贸结算明细_5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="内贸结算明细_5Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>内贸结算明细_5Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="凭证.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>凭证.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="凭证Ds.cs">
+      <DependentUpon>凭证Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="凭证收支明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>凭证收支明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口其他业务_应收对账单_6.cs">
+      <DependentUpon>进口其他业务_应收对账单_6.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="进口其他业务_应收对账单_5.cs">
+      <DependentUpon>进口其他业务_应收对账单_5.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="进口其他业务_应收对账单_4.cs">
+      <DependentUpon>进口其他业务_应收对账单_4.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="进口其他业务_应收对账单_3.cs">
+      <DependentUpon>进口其他业务_应收对账单_3.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="进口其他业务_应收对账单_2.cs">
+      <DependentUpon>进口其他业务_应收对账单_2.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="进口其他业务_应收对账单_1.cs">
+      <DependentUpon>进口其他业务_应收对账单_1.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="货代报关部委托运输联系单_进口.cs">
+      <DependentUpon>货代报关部委托运输联系单_进口.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="货代报关部委托运输联系单_进口Ds.cs">
+      <DependentUpon>货代报关部委托运输联系单_进口Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="货代报关部委托运输联系单_进口Ds.Designer.cs">
+      <DependentUpon>货代报关部委托运输联系单_进口Ds.xsd</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="固定资产Ds.cs">
+      <DependentUpon>固定资产Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="固定资产Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>固定资产Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波新概念出运清单_给委托人.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波新概念出运清单_给委托人.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波新概念出运清单_给委托人Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波新概念出运清单_给委托人Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波新概念出运清单_给船公司.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波新概念出运清单_给船公司.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波新概念出运清单_给船公司Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波新概念出运清单_给船公司Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波新概念派车单.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波新概念派车单.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波新概念派车单Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波新概念派车单Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_10.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_10.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_10Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_10Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_5Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_5Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_10.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_10.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_10Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_10Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_2.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_2.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_3.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_3.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_4.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_4.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单_额外_5.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_5.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="宁波易可报关有限公司业务费用核对确认单Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="工资单.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>工资单.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="工资单Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>工资单Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="投资明细_投资增减明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>投资明细_投资增减明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="投资明细_投资总额明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>投资明细_投资总额明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="滞箱费.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>滞箱费.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="滞箱费Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>滞箱费Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="滞箱费减免联系单.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>滞箱费减免联系单.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="滞箱费减免联系单Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>滞箱费减免联系单Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="财务月报表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="财务月报表_业务应收应付款.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_业务应收应付款.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表_业务盈亏情况.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_业务盈亏情况.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表_待确认业务.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_待确认业务.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表_管理费用开支合计.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_管理费用开支合计.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表_财务费用开支合计.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_财务费用开支合计.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表_资金面变化情况.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_资金面变化情况.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务月报表_非业务类收入合计.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务月报表_非业务类收入合计.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口其他业务应收对账单Ds.cs">
+      <DependentUpon>进口其他业务应收对账单Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口其他业务应收对账单Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口其他业务应收对账单Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="进口报关业务明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关业务明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口报关业务明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关业务明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="进口报关业务月报表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关业务月报表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口报关业务月报表Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关业务月报表Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="进口报关毛利逐票明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关毛利逐票明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口报关毛利逐票明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关毛利逐票明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="实付佣金明细.cs">
+      <DependentUpon>实付佣金明细.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="处理坏账损失明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>处理坏账损失明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="处理坏账损失明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>处理坏账损失明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="实付佣金明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>实付佣金明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="投资明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>投资明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="资金明细Ds.cs">
+      <DependentUpon>资金明细Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口报关盈亏简明Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关盈亏简明Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="进口报关盈亏简明表.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关盈亏简明表.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口报关盈亏简明表Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口报关盈亏简明表Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="进口转关运输货物核放单.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口转关运输货物核放单.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="进口转关运输货物核放单Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>进口转关运输货物核放单Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="非业务费用明细_投资Ds.cs">
+      <DependentUpon>非业务费用明细_投资Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="非业务费用明细_投资Ds.Designer.cs">
+      <DependentUpon>非业务费用明细_投资Ds.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="公司投资他人_本月投资增减明细.cs">
+      <DependentUpon>公司投资他人_本月投资增减明细.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="公司投资他人_总额投资明细.cs">
+      <DependentUpon>公司投资他人_总额投资明细.rpt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="借出款明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>借出款明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="凭证费用明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>凭证费用明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="公司投资他人明细.cs">
+      <DependentUpon>公司投资他人明细.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="资金明细_承兑汇票.cs">
+      <DependentUpon>资金明细_承兑汇票.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="固定资产明细Ds.cs">
+      <DependentUpon>固定资产明细Ds.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="凭证Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>凭证Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="固定资产明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>固定资产明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="固定资产明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>固定资产明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="管理费用开支明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>管理费用开支明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="营业外收入明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>营业外收入明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="财务费用开支明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>财务费用开支明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="贷款明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>贷款明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="资金明细.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>资金明细.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="资金明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>资金明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="资金明细_银行存款.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>资金明细_银行存款.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="资金流水Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>资金流水Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="资金流水.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>资金流水.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="非业务费用明细Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>非业务费用明细Ds.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="非业务费用明细_借贷Ds.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>非业务费用明细_借贷Ds.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="他人投资公司明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>他人投资公司明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="其它开支明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>其它开支明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="他人投资公司_总额投资明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>他人投资公司_总额投资明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="他人投资公司_本月投资增减明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>他人投资公司_本月投资增减明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="内贸结算明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>内贸结算明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="内贸结算明细_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>内贸结算明细_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="内贸结算明细_5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>内贸结算明细_5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="凭证.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>凭证.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="凭证收支明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>凭证收支明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波新概念出运清单_给委托人.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波新概念出运清单_给委托人.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波新概念出运清单_给船公司.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波新概念出运清单_给船公司.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波新概念派车单.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波新概念派车单.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="投资明细_投资增减明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>投资明细_投资增减明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="投资明细_投资总额明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>投资明细_投资总额明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="滞箱费减免联系单.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>滞箱费减免联系单.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口报关业务明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口报关业务明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口报关业务月报表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口报关业务月报表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="实付佣金明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>实付佣金明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="处理坏账损失明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>处理坏账损失明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="公司投资他人_本月投资增减明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>公司投资他人_本月投资增减明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="公司投资他人_总额投资明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>公司投资他人_总额投资明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="借出款明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>借出款明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="凭证费用明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>凭证费用明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="公司投资他人明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>公司投资他人明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="资金明细_承兑汇票.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>资金明细_承兑汇票.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="固定资产明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>固定资产明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="管理费用开支明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>管理费用开支明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="营业外收入明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>营业外收入明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务费用开支明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务费用开支明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="贷款明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>贷款明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="资金明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>资金明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="资金明细_银行存款.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>资金明细_银行存款.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="资金流水.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>资金流水.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口转关运输货物核放单.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口转关运输货物核放单.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="业务应收应付款_总表Ds.xsc">
+      <DependentUpon>业务应收应付款_总表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务应收应付款_总表Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>业务应收应付款_总表Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="业务应收应付款_总表Ds.xss">
+      <DependentUpon>业务应收应付款_总表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务应收应付款表Ds.xsc">
+      <DependentUpon>业务应收应付款表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务应收应付款表Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>业务应收应付款表Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="业务应收应付款表Ds.xss">
+      <DependentUpon>业务应收应付款表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务盈亏预估表Ds.xsc">
+      <DependentUpon>业务盈亏预估表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务盈亏预估表Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>业务盈亏预估表Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="业务盈亏预估表Ds.xss">
+      <DependentUpon>业务盈亏预估表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务盈亏预计Ds.xsc">
+      <DependentUpon>业务盈亏预计Ds.xsd</DependentUpon>
+    </None>
+    <None Include="业务盈亏预计Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>业务盈亏预计Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="业务盈亏预计Ds.xss">
+      <DependentUpon>业务盈亏预计Ds.xsd</DependentUpon>
+    </None>
+    <None Include="修洗箱费Ds.xsc">
+      <DependentUpon>修洗箱费Ds.xsd</DependentUpon>
+    </None>
+    <None Include="修洗箱费Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>修洗箱费Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="修洗箱费Ds.xss">
+      <DependentUpon>修洗箱费Ds.xsd</DependentUpon>
+    </None>
+    <None Include="借贷款明细Ds.xsc">
+      <DependentUpon>借贷款明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="借贷款明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>借贷款明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="其它开支明细Ds.xsc">
+      <DependentUpon>其它开支明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="其它开支明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>其它开支明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="其它开支明细Ds.xss">
+      <DependentUpon>其它开支明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="内贸结算明细Ds.xsc">
+      <DependentUpon>内贸结算明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="内贸结算明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>内贸结算明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="内贸结算明细Ds.xss">
+      <DependentUpon>内贸结算明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="内贸结算明细_5Ds.xsc">
+      <DependentUpon>内贸结算明细_5Ds.xsd</DependentUpon>
+    </None>
+    <None Include="内贸结算明细_5Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>内贸结算明细_5Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="滞箱费减免联系单Ds.xsc">
+      <DependentUpon>滞箱费减免联系单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="货代报关部委托运输联系单_进口Ds.xsc">
+      <DependentUpon>货代报关部委托运输联系单_进口Ds.xsd</DependentUpon>
+    </None>
+    <None Include="货代报关部委托运输联系单_进口Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>货代报关部委托运输联系单_进口Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="货代报关部委托运输联系单_进口Ds.xss">
+      <DependentUpon>货代报关部委托运输联系单_进口Ds.xsd</DependentUpon>
+    </None>
+    <None Include="固定资产Ds.xsc">
+      <DependentUpon>固定资产Ds.xsd</DependentUpon>
+    </None>
+    <None Include="固定资产Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>固定资产Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="固定资产Ds.xss">
+      <DependentUpon>固定资产Ds.xsd</DependentUpon>
+    </None>
+    <None Include="处理坏账损失明细Ds.xsc">
+      <DependentUpon>处理坏账损失明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="处理坏账损失明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>处理坏账损失明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="处理坏账损失明细Ds.xss">
+      <DependentUpon>处理坏账损失明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波新概念出运清单_给委托人Ds.xsc">
+      <DependentUpon>宁波新概念出运清单_给委托人Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波新概念出运清单_给委托人Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波新概念出运清单_给委托人Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="宁波新概念出运清单_给委托人Ds.xss">
+      <DependentUpon>宁波新概念出运清单_给委托人Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波新概念出运清单_给船公司Ds.xsc">
+      <DependentUpon>宁波新概念出运清单_给船公司Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波新概念出运清单_给船公司Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波新概念出运清单_给船公司Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="宁波新概念出运清单_给船公司Ds.xss">
+      <DependentUpon>宁波新概念出运清单_给船公司Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波新概念派车单Ds.xsc">
+      <DependentUpon>宁波新概念派车单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波新概念派车单Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波新概念派车单Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="宁波新概念派车单Ds.xss">
+      <DependentUpon>宁波新概念派车单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_10Ds.xsc">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_10Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_10Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_10Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_10Ds.xss">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_10Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_5Ds.xsc">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_5Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_5Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_5Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_5Ds.xss">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_5Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_额外_10Ds.xsc">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_10Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_额外_10Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_10Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单_额外_10Ds.xss">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单_额外_10Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单Ds.xsc">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="宁波易可报关有限公司业务费用核对确认单Ds.xss">
+      <DependentUpon>宁波易可报关有限公司业务费用核对确认单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="实付佣金明细Ds.xsc">
+      <DependentUpon>实付佣金明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="实付佣金明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>实付佣金明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="实付佣金明细Ds.xss">
+      <DependentUpon>实付佣金明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="工资单Ds.xsc">
+      <DependentUpon>工资单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="工资单Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>工资单Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="工资单Ds.xss">
+      <DependentUpon>工资单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="投资明细Ds.xsc">
+      <DependentUpon>投资明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="投资明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>投资明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="投资明细Ds.xss">
+      <DependentUpon>投资明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="滞箱费Ds.xsc">
+      <DependentUpon>滞箱费Ds.xsd</DependentUpon>
+    </None>
+    <None Include="滞箱费Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>滞箱费Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="滞箱费Ds.xss">
+      <DependentUpon>滞箱费Ds.xsd</DependentUpon>
+    </None>
+    <None Include="滞箱费减免联系单Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>滞箱费减免联系单Ds.Designer.cs</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="业务应付款月报表_其它.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应付款月报表_其它.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应付款月报表_内贸出港.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应付款月报表_内贸出港.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应付款月报表_总表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应付款月报表_总表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应付款月报表_进口报关.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应付款月报表_进口报关.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应收款月报表_其它.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应收款月报表_其它.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应收款月报表_内贸出港.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应收款月报表_内贸出港.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应收款月报表_总表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应收款月报表_总表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务应收款月报表_进口报关.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务应收款月报表_进口报关.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务盈亏预估.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务盈亏预估.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务盈亏预估表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务盈亏预估表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务盈亏预估表_其他业务.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务盈亏预估表_其他业务.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务盈亏预估表_内贸出港.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务盈亏预估表_内贸出港.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="业务盈亏预估表_进口报表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>业务盈亏预估表_进口报表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="修洗箱费.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>修洗箱费.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口其他业务_应收对账单_6.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口其他业务_应收对账单_6.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口其他业务_应收对账单_5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口其他业务_应收对账单_5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口其他业务_应收对账单_4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口其他业务_应收对账单_4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口其他业务_应收对账单_3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口其他业务_应收对账单_3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口其他业务_应收对账单_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口其他业务_应收对账单_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口其他业务_应收对账单_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口其他业务_应收对账单_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="货代报关部委托运输联系单_进口.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>货代报关部委托运输联系单_进口.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_10.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_10.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_额外_1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_1.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_额外_10.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_10.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_额外_2.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_2.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_额外_3.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_3.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_额外_4.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_4.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="宁波易可报关有限公司业务费用核对确认单_额外_5.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>宁波易可报关有限公司业务费用核对确认单_额外_5.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="工资单.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>工资单.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="滞箱费.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>滞箱费.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="财务月报表Ds.xsc">
+      <DependentUpon>财务月报表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="财务月报表Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>财务月报表Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="财务月报表Ds.xss">
+      <DependentUpon>财务月报表Ds.xsd</DependentUpon>
+    </None>
+    <EmbeddedResource Include="财务月报表_业务应收应付款.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_业务应收应付款.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表_业务盈亏情况.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_业务盈亏情况.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表_待确认业务.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_待确认业务.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表_管理费用开支合计.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_管理费用开支合计.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表_财务费用开支合计.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_财务费用开支合计.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表_资金面变化情况.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_资金面变化情况.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="财务月报表_非业务类收入合计.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>财务月报表_非业务类收入合计.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口报关毛利逐票明细.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口报关毛利逐票明细.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="进口报关盈亏简明表.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>进口报关盈亏简明表.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="进口其他业务应收对账单Ds.xsc">
+      <DependentUpon>进口其他业务应收对账单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口其他业务应收对账单Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口其他业务应收对账单Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="进口其他业务应收对账单Ds.xss">
+      <DependentUpon>进口其他业务应收对账单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关业务明细Ds.xsc">
+      <DependentUpon>进口报关业务明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关业务明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口报关业务明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="进口报关业务明细Ds.xss">
+      <DependentUpon>进口报关业务明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关业务月报表Ds.xsc">
+      <DependentUpon>进口报关业务月报表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关业务月报表Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口报关业务月报表Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="进口报关业务月报表Ds.xss">
+      <DependentUpon>进口报关业务月报表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关毛利逐票明细Ds.xsc">
+      <DependentUpon>进口报关毛利逐票明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关毛利逐票明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口报关毛利逐票明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="进口报关毛利逐票明细Ds.xss">
+      <DependentUpon>进口报关毛利逐票明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关盈亏简明Ds.xsc">
+      <DependentUpon>进口报关盈亏简明Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关盈亏简明Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口报关盈亏简明Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="进口报关盈亏简明Ds.xss">
+      <DependentUpon>进口报关盈亏简明Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关盈亏简明表Ds.xsc">
+      <DependentUpon>进口报关盈亏简明表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口报关盈亏简明表Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口报关盈亏简明表Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="进口报关盈亏简明表Ds.xss">
+      <DependentUpon>进口报关盈亏简明表Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口转关运输货物核放单Ds.xsc">
+      <DependentUpon>进口转关运输货物核放单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="进口转关运输货物核放单Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>进口转关运输货物核放单Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="进口转关运输货物核放单Ds.xss">
+      <DependentUpon>进口转关运输货物核放单Ds.xsd</DependentUpon>
+    </None>
+    <None Include="非业务费用明细_投资Ds.xsc">
+      <DependentUpon>非业务费用明细_投资Ds.xsd</DependentUpon>
+    </None>
+    <None Include="非业务费用明细_投资Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>非业务费用明细_投资Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="非业务费用明细_投资Ds.xss">
+      <DependentUpon>非业务费用明细_投资Ds.xsd</DependentUpon>
+    </None>
+    <None Include="凭证Ds.xsc">
+      <DependentUpon>凭证Ds.xsd</DependentUpon>
+    </None>
+    <None Include="凭证Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>凭证Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="凭证Ds.xss">
+      <DependentUpon>凭证Ds.xsd</DependentUpon>
+    </None>
+    <None Include="固定资产明细Ds.xsc">
+      <DependentUpon>固定资产明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="固定资产明细Ds.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>固定资产明细Ds.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="固定资产明细Ds.xss">
+      <DependentUpon>固定资产明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="资金明细Ds.xsc">
+      <DependentUpon>资金明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="资金明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>资金明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="资金明细Ds.xss">
+      <DependentUpon>资金明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="资金流水Ds.xsc">
+      <DependentUpon>资金流水Ds.xsd</DependentUpon>
+    </None>
+    <None Include="资金流水Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>资金流水Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="资金流水Ds.xss">
+      <DependentUpon>资金流水Ds.xsd</DependentUpon>
+    </None>
+    <None Include="非业务费用明细Ds.xsc">
+      <DependentUpon>非业务费用明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="非业务费用明细Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>非业务费用明细Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="非业务费用明细Ds.xss">
+      <DependentUpon>非业务费用明细Ds.xsd</DependentUpon>
+    </None>
+    <None Include="非业务费用明细_借贷Ds.xsc">
+      <DependentUpon>非业务费用明细_借贷Ds.xsd</DependentUpon>
+    </None>
+    <None Include="非业务费用明细_借贷Ds.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>非业务费用明细_借贷Ds.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="非业务费用明细_借贷Ds.xss">
+      <DependentUpon>非业务费用明细_借贷Ds.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hd.Model.Base\Hd.Model.Base.csproj">
+      <Project>{7F73873B-3465-485F-B83B-43526F544C6D}</Project>
+      <Name>Hd.Model.Base</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

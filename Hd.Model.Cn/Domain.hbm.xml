@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Cn" assembly="Hd.Model.Cn" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="换汇" table="财务_换汇" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="编号" length="8" not-null="true" unique="true" unique-key="UK_换汇_编号" index="Idx_换汇_编号" />
+    <property name="日期" not-null="true" />
+    <property name="出款账户编号" column="出款账户" not-null="false" />
+    <property name="入款账户编号" column="入款账户" not-null="false" />
+    <property name="经办人编号" column="经办人" length="6" />
+    <property name="备注" length="500" />
+    <property name="摘要" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="出款账户" update="false" insert="false" foreign-key="FK_换汇_出款账户" />
+    <many-to-one name="入款账户" update="false" insert="false" foreign-key="FK_换汇_入款账户" />
+    <many-to-one name="经办人" update="false" insert="false" foreign-key="FK_换汇_经办人" />
+    <!----><component name="出款金额">
+            <property name="币制编号" column = "出款币制" length="3" not-null="true"/>
+            <property name="数额" column = "出款数额" not-null="true"/>
+            <many-to-one name="币制" column = "出款币制" update="false" insert="false" foreign-key="FK_换汇_出款币制"/>
+            </component>
+    <!----><component name="入款金额">
+            <property name="币制编号" column = "入款币制" length="3" not-null="true"/>
+            <property name="数额" column = "入款数额" not-null="true"/>
+            <many-to-one name="币制" column = "入款币制" update="false" insert="false" foreign-key="FK_换汇_入款币制" />
+            </component>
+  </class>
+  <class name="支票" table="财务_支票" discriminator-value="0" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <discriminator column="支票类型" type="Int32" />
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="票据号码" length="50" not-null="true" unique="true" unique-key="UK_支票_票据号码" index="Idx_支票_票据号码" />
+    <property name="买入时间" not-null="true" />
+    <property name="银行账户编号" column="银行账户" not-null="true" />
+    <property name="金额" length="19" precision="19" scale="2" not-null="false" />
+    <property name="领用时间" />
+    <property name="经办人编号" column="经办人" length="6" />
+    <property name="领用方式" not-null="false" />
+    <property name="备注" length="500" />
+    <property name="支付凭证号" length="10" />
+    <property name="日期" />
+    <property name="摘要" length="500" />
+    <property name="是否作废" not-null="true" />
+    <property name="Submitted" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="银行账户" not-null="true" update="false" insert="false" foreign-key="FK_支票_银行账户" />
+    <many-to-one name="经办人" update="false" insert="false" foreign-key="FK_支票_经办人" />
+  </class>
+  <class name="银行存取款" table="财务_银行存取款" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="编号" length="8" not-null="true" unique="true" unique-key="UK_银行存取款_编号" index="Idx_银行存取款_编号" />
+    <property name="日期" not-null="true" />
+    <property name="存取标志" not-null="true" />
+    <property name="银行账户编号" column="银行账户" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="经办人编号" column="经办人" length="6" />
+    <property name="备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+    <many-to-one name="银行账户" update="false" insert="false" foreign-key="FK_银行存取款_银行账户" />
+    <many-to-one name="经办人" update="false" insert="false" foreign-key="FK_银行存取款_员工" />
+  </class>
+  <subclass name="现金支票" discriminator-value="1" extends="Hd.Model.Cn.支票, Hd.Model.Cn" />
+  <subclass name="转账支票" discriminator-value="2" extends="Hd.Model.Cn.支票, Hd.Model.Cn">
+    <property name="入款账户编号" column="入款账户" not-null="false" />
+    <many-to-one name="入款账户" not-null="false" update="false" insert="false" foreign-key="FK_支票_入款账户" />
+  </subclass>
+  <joined-subclass name="承兑汇票" table="财务_承兑汇票" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_承兑汇票_费用实体" />
+    <property name="票据号码" length="50" not-null="true" unique="true" unique-key="UK_承兑汇票_承兑汇票号码" index="Idx_承兑汇票_承兑汇票号码" />
+    <property name="出票银行" length="20" not-null="true" />
+    <property name="承兑期限" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="付款人编号" column="付款人" length="6" not-null="true" />
+    <property name="托收贴现" />
+    <property name="出去时间" />
+    <property name="经办人编号" column="经办人" length="6" />
+    <property name="出去经手人编号" column="出去经手人" length="6" />
+    <property name="返回时间" />
+    <property name="返回方式" />
+    <property name="入款账户编号" column="入款账户" />
+    <property name="返回经手人编号" column="返回经手人" length="6" />
+    <property name="返回金额" precision="19" scale="2" not-null="false" />
+    <property name="备注" length="500" />
+    <property name="摘要" length="500" />
+    <property name="凭证号收" update="false" insert="false" formula="(SELECT TOP 1 A.凭证号 FROM 视图查询_承兑汇票_凭证收付 A WHERE A.收付标志 = 1 AND A.承兑汇票 = Id)" />
+    <property name="凭证日期收" update="false" insert="false" formula="(SELECT TOP 1 A.日期 FROM 视图查询_承兑汇票_凭证收付 A WHERE A.收付标志 = 1 AND A.承兑汇票 = Id)" />
+    <property name="凭证号付" update="false" insert="false" formula="(SELECT TOP 1 A.凭证号 FROM 视图查询_承兑汇票_凭证收付 A WHERE A.收付标志 = 2 AND A.承兑汇票 = Id)" />
+    <property name="凭证日期付" update="false" insert="false" formula="(SELECT TOP 1 A.日期 FROM 视图查询_承兑汇票_凭证收付 A WHERE A.收付标志 = 2 AND A.承兑汇票 = Id)" />
+    <many-to-one name="付款人" update="false" insert="false" foreign-key="FK_承兑汇票_付款人" />
+    <many-to-one name="经办人" update="false" insert="false" foreign-key="FK_承兑汇票_经办人" />
+    <many-to-one name="出去经手人" update="false" insert="false" foreign-key="FK_承兑汇票_出去经手人" />
+    <many-to-one name="入款账户" update="false" insert="false" foreign-key="FK_承兑汇票_入款账户" />
+    <many-to-one name="返回经手人" update="false" insert="false" foreign-key="FK_承兑汇票_返回经手人" />
+  </joined-subclass>
+</hibernate-mapping>

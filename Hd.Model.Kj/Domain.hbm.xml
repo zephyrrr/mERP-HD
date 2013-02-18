@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Kj" assembly="Hd.Model.Kj" xmlns="urn:nhibernate-mapping-2.2">
+  <joined-subclass name="固定资产" table="财务_固定资产" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_固定资产_费用实体" />
+    <property name="收款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '1' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="付款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '2' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="分类" not-null="true" />
+    <property name="购入时间" not-null="false" />
+    <property name="简介" length="50" not-null="false" />
+    <property name="发票号码" length="50" />
+    <property name="购入卖出信息" length="200" />
+    <property name="售前售后信息" length="200" />
+    <property name="使用年限" not-null="false" />
+    <property name="状态" not-null="true" />
+    <property name="购入金额" precision="19" scale="2" not-null="false" />
+    <property name="月折旧额" precision="19" scale="2" not-null="false" />
+    <property name="卖出金额" length="19" precision="19" scale="2" />
+    <property name="卖出时间" />
+    <property name="备注" length="500" />
+    <property name="买方编号" column="买方" length="6" not-null="false" />
+    <property name="剩余折旧" precision="19" scale="2" not-null="false" />
+    <property name="对外已确认" precision="19" scale="2" not-null="false" />
+    <property name="对外未确认" precision="19" scale="2" not-null="false" />
+    <property name="其他未确认" precision="19" scale="2" not-null="false" />
+    <property name="其他已确认" precision="19" scale="2" not-null="false" />
+    <property name="上次折旧日期" not-null="false" />
+    <property name="警示状态" length="100" not-null="false" />
+    <many-to-one name="买方" not-null="false" update="false" insert="false" />
+  </joined-subclass>
+  <union-subclass name="Hd.Model.Kj.调节款, Hd.Model.Kj" table="财务_调节款" extends="Hd.Model.应收应付源, Hd.Model.Base">
+    <property name="编号" length="8" not-null="true" unique="true" unique-key="UK_调节款_编号" index="Idx_调节款_编号" />
+    <property name="收付标志" not-null="true" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="金额" length="19" precision="19" scale="2" not-null="true" />
+    <property name="费用项编号" column="费用项" length="3" not-null="true" />
+    <property name="日期" not-null="true" />
+    <property name="结算期限" not-null="false" />
+    <property name="业务类型编号" column="业务类型" not-null="true" />
+    <property name="备注" length="200" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_调节款_相关人" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_调节款_费用项" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_调节款_业务类型" />
+  </union-subclass>
+  <joined-subclass name="小件资产" table="财务_小件资产" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_小件资产_费用实体" />
+    <property name="收款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '1' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="付款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '2' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="购入时间" not-null="false" />
+    <property name="简介" length="50" not-null="false" />
+    <property name="发票号码" length="50" />
+    <property name="购入卖出信息" length="200" />
+    <property name="售前售后信息" length="200" />
+    <property name="状态" not-null="true" />
+    <property name="购入金额" precision="19" scale="2" not-null="false" />
+    <property name="卖出金额" length="19" precision="19" scale="2" />
+    <property name="卖出时间" />
+    <property name="备注" length="500" />
+  </joined-subclass>
+  <joined-subclass name="工资单" table="财务_工资单" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_工资单_费用实体" />
+    <property name="凭证号" update="false" insert="false" formula="(SELECT TOP 1 A.凭证号 FROM 财务_凭证 A INNER JOIN 财务_凭证费用明细 B ON B.凭证 = A.ID INNER JOIN 财务_费用 C ON C.凭证费用明细 = B.ID WHERE C.费用实体 = Id)" />
+    <property name="登记金额" update="false" insert="false" formula="(SELECT TOP 1 A.金额 FROM 财务_费用 A WHERE A.费用实体 = Id)" />
+    <property name="员工编号" column="员工" length="6" not-null="true" />
+    <property name="日期" not-null="false" />
+    <property name="简介" length="500" />
+    <property name="备注" length="500" />
+    <property name="基本工资" precision="19" scale="2" not-null="false" />
+    <property name="餐费" precision="19" scale="2" not-null="false" />
+    <property name="通讯费" precision="19" scale="2" not-null="false" />
+    <property name="福利" precision="19" scale="2" not-null="false" />
+    <property name="补助" precision="19" scale="2" not-null="false" />
+    <property name="违纪扣款" precision="19" scale="2" not-null="false" />
+    <property name="养老扣款" precision="19" scale="2" not-null="false" />
+    <property name="医疗扣款" precision="19" scale="2" not-null="false" />
+    <property name="失业扣款" precision="19" scale="2" not-null="false" />
+    <property name="其他扣款" precision="19" scale="2" not-null="false" />
+    <many-to-one name="员工" update="false" insert="false" foreign-key="FK_工资_员工" />
+  </joined-subclass>
+  <union-subclass name="Hd.Model.Kj.资产入库, Hd.Model.Kj" table="财务_资产入库" extends="Hd.Model.应收应付源, Hd.Model.Base">
+    <property name="编号" length="8" not-null="true" unique="true" unique-key="UK_资产入库_编号" index="Idx_资产入库_编号" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="金额" length="19" precision="19" scale="2" not-null="true" />
+    <property name="日期" not-null="true" />
+    <property name="结算期限" not-null="false" />
+    <property name="业务类型编号" column="业务类型" not-null="true" />
+    <property name="备注" length="200" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_资产入库_相关人" />
+    <many-to-one name="业务类型" not-null="true" update="false" insert="false" foreign-key="FK_资产入库_业务类型" />
+  </union-subclass>
+  <joined-subclass name="Hd.Model.Kj.坏账, Hd.Model.Kj" table="财务_坏账" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_坏账_费用实体" />
+    <property name="对账单号" update="false" insert="false" formula="(SELECT TOP 1 A.编号 FROM 财务_对账单 A INNER JOIN 财务_费用 B ON B.对账单 = A.ID AND B.费用实体 = Id)" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="日期" not-null="true" />
+    <property name="简介" length="500" />
+    <property name="备注" length="500" />
+    <property name="收付标志" not-null="true" />
+    <property name="金额" precision="19" scale="2" not-null="true" />
+    <property name="费用项编号" column="费用项" length="3" not-null="true" />
+    <property name="业务类型编号" column="业务类型" not-null="true" />
+    <many-to-one name="相关人" not-null="true" update="false" insert="false" foreign-key="FK_坏账_相关人" />
+    <many-to-one name="费用项" update="false" insert="false" foreign-key="FK_坏账_费用项" />
+    <many-to-one name="业务类型" not-null="false" update="false" insert="false" foreign-key="FK_坏账_费用类别" />
+  </joined-subclass>
+  <joined-subclass name="其他非业务" table="财务_其他非业务" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_其他非业务_费用实体" />
+    <property name="收款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '1' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="付款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '2' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="简介" length="500" />
+    <property name="备注" length="500" />
+    <property name="摘要" length="100" />
+  </joined-subclass>
+  <joined-subclass name="投资" table="财务_投资" extends="Hd.Model.费用实体, Hd.Model.Base">
+    <key column="Id" foreign-key="FK_投资_费用实体" />
+    <property name="收款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '1' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="付款小计" update="false" insert="false" formula="(SELECT SUM(ISNULL((CASE A.收付标志 WHEN '2' THEN A.金额 ELSE NULL END), 0)) FROM 财务_费用 A WHERE A.费用实体 = Id) " />
+    <property name="日期" not-null="true" />
+    <property name="相关人编号" column="相关人" length="6" not-null="true" />
+    <property name="简介" length="500" />
+    <property name="备注" length="500" />
+    <property name="摘要" length="100" />
+    <many-to-one name="相关人" update="false" insert="false" foreign-key="FK_投资_相关人" />
+  </joined-subclass>
+</hibernate-mapping>

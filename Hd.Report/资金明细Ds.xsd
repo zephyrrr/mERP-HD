@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="资金明细Ds" targetNamespace="http://tempuri.org/资金明细表Ds.xsd" xmlns:mstns="http://tempuri.org/资金明细表Ds.xsd" xmlns="http://tempuri.org/资金明细表Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="资金明细Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="资金明细Ds" msprop:Generator_DataSetName="资金明细Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="银行存款" msprop:Generator_UserTableName="银行存款" msprop:Generator_RowDeletedName="银行存款RowDeleted" msprop:Generator_RowChangedName="银行存款RowChanged" msprop:Generator_RowClassName="银行存款Row" msprop:Generator_RowChangingName="银行存款RowChanging" msprop:Generator_RowEvArgName="银行存款RowChangeEvent" msprop:Generator_RowEvHandlerName="银行存款RowChangeEventHandler" msprop:Generator_TableClassName="银行存款DataTable" msprop:Generator_TableVarName="table银行存款" msprop:Generator_RowDeletingName="银行存款RowDeleting" msprop:Generator_TablePropName="银行存款">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="开户银行" msprop:Generator_UserColumnName="开户银行" msprop:Generator_ColumnVarNameInTable="column开户银行" msprop:Generator_ColumnPropNameInRow="开户银行" msprop:Generator_ColumnPropNameInTable="开户银行Column" type="xs:string" minOccurs="0" />
+              <xs:element name="账号" msprop:Generator_UserColumnName="账号" msprop:Generator_ColumnVarNameInTable="column账号" msprop:Generator_ColumnPropNameInRow="账号" msprop:Generator_ColumnPropNameInTable="账号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="月初值" msprop:Generator_UserColumnName="月初值" msprop:Generator_ColumnVarNameInTable="column月初值" msprop:Generator_ColumnPropNameInRow="月初值" msprop:Generator_ColumnPropNameInTable="月初值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月增减" msprop:Generator_UserColumnName="本月增减" msprop:Generator_ColumnVarNameInTable="column本月增减" msprop:Generator_ColumnPropNameInRow="本月增减" msprop:Generator_ColumnPropNameInTable="本月增减Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末值" msprop:Generator_UserColumnName="月末值" msprop:Generator_ColumnVarNameInTable="column月末值" msprop:Generator_ColumnPropNameInRow="月末值" msprop:Generator_ColumnPropNameInTable="月末值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="币制" msprop:Generator_UserColumnName="币制" msprop:Generator_ColumnVarNameInTable="column币制" msprop:Generator_ColumnPropNameInRow="币制" msprop:Generator_ColumnPropNameInTable="币制Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="承兑汇票" msprop:Generator_UserTableName="承兑汇票" msprop:Generator_RowDeletedName="承兑汇票RowDeleted" msprop:Generator_RowChangedName="承兑汇票RowChanged" msprop:Generator_RowClassName="承兑汇票Row" msprop:Generator_RowChangingName="承兑汇票RowChanging" msprop:Generator_RowEvArgName="承兑汇票RowChangeEvent" msprop:Generator_RowEvHandlerName="承兑汇票RowChangeEventHandler" msprop:Generator_TableClassName="承兑汇票DataTable" msprop:Generator_TableVarName="table承兑汇票" msprop:Generator_RowDeletingName="承兑汇票RowDeleting" msprop:Generator_TablePropName="承兑汇票">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="所属银行" msprop:Generator_UserColumnName="所属银行" msprop:Generator_ColumnVarNameInTable="column所属银行" msprop:Generator_ColumnPropNameInRow="所属银行" msprop:Generator_ColumnPropNameInTable="所属银行Column" type="xs:string" minOccurs="0" />
+              <xs:element name="票号" msprop:Generator_UserColumnName="票号" msprop:Generator_ColumnVarNameInTable="column票号" msprop:Generator_ColumnPropNameInRow="票号" msprop:Generator_ColumnPropNameInTable="票号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="来源" msprop:Generator_UserColumnName="来源" msprop:Generator_ColumnVarNameInTable="column来源" msprop:Generator_ColumnPropNameInRow="来源" msprop:Generator_ColumnPropNameInTable="来源Column" type="xs:string" minOccurs="0" />
+              <xs:element name="金额" msprop:Generator_UserColumnName="金额" msprop:Generator_ColumnVarNameInTable="column金额" msprop:Generator_ColumnPropNameInRow="金额" msprop:Generator_ColumnPropNameInTable="金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="托收贴现" msprop:Generator_UserColumnName="托收贴现" msprop:Generator_ColumnVarNameInTable="column托收贴现" msprop:Generator_ColumnPropNameInRow="托收贴现" msprop:Generator_ColumnPropNameInTable="托收贴现Column" type="xs:string" minOccurs="0" />
+              <xs:element name="到期时间" msprop:Generator_UserColumnName="到期时间" msprop:Generator_ColumnVarNameInTable="column到期时间" msprop:Generator_ColumnPropNameInRow="到期时间" msprop:Generator_ColumnPropNameInTable="到期时间Column" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="总体情况" msprop:Generator_UserTableName="总体情况" msprop:Generator_RowDeletedName="总体情况RowDeleted" msprop:Generator_TableClassName="总体情况DataTable" msprop:Generator_RowChangedName="总体情况RowChanged" msprop:Generator_RowClassName="总体情况Row" msprop:Generator_RowChangingName="总体情况RowChanging" msprop:Generator_RowEvArgName="总体情况RowChangeEvent" msprop:Generator_RowEvHandlerName="总体情况RowChangeEventHandler" msprop:Generator_TablePropName="总体情况" msprop:Generator_TableVarName="table总体情况" msprop:Generator_RowDeletingName="总体情况RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="手头现金_CNY" msprop:Generator_UserColumnName="手头现金_CNY" msprop:Generator_ColumnPropNameInRow="手头现金_CNY" msprop:Generator_ColumnVarNameInTable="column手头现金_CNY" msprop:Generator_ColumnPropNameInTable="手头现金_CNYColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="手头现金_USD" msprop:Generator_UserColumnName="手头现金_USD" msprop:Generator_ColumnPropNameInRow="手头现金_USD" msprop:Generator_ColumnVarNameInTable="column手头现金_USD" msprop:Generator_ColumnPropNameInTable="手头现金_USDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="银行存款_CNY" msprop:Generator_UserColumnName="银行存款_CNY" msprop:Generator_ColumnPropNameInRow="银行存款_CNY" msprop:Generator_ColumnVarNameInTable="column银行存款_CNY" msprop:Generator_ColumnPropNameInTable="银行存款_CNYColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="银行存款_USD" msprop:Generator_UserColumnName="银行存款_USD" msprop:Generator_ColumnPropNameInRow="银行存款_USD" msprop:Generator_ColumnVarNameInTable="column银行存款_USD" msprop:Generator_ColumnPropNameInTable="银行存款_USDColumn" type="xs:decimal" minOccurs="0" />
+              <xs:element name="银行存款_CNY增减" msprop:Generator_UserColumnName="银行存款_CNY增减" msprop:Generator_ColumnPropNameInRow="银行存款_CNY增减" msprop:Generator_ColumnVarNameInTable="column银行存款_CNY增减" msprop:Generator_ColumnPropNameInTable="银行存款_CNY增减Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="银行存款_USD增减" msprop:Generator_UserColumnName="银行存款_USD增减" msprop:Generator_ColumnPropNameInRow="银行存款_USD增减" msprop:Generator_ColumnVarNameInTable="column银行存款_USD增减" msprop:Generator_ColumnPropNameInTable="银行存款_USD增减Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="承兑汇票总数" msprop:Generator_UserColumnName="承兑汇票总数" msprop:Generator_ColumnPropNameInRow="承兑汇票总数" msprop:Generator_ColumnVarNameInTable="column承兑汇票总数" msprop:Generator_ColumnPropNameInTable="承兑汇票总数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="承兑汇票金额" msprop:Generator_UserColumnName="承兑汇票金额" msprop:Generator_ColumnPropNameInRow="承兑汇票金额" msprop:Generator_ColumnVarNameInTable="column承兑汇票金额" msprop:Generator_ColumnPropNameInTable="承兑汇票金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="贴现总数" msprop:Generator_UserColumnName="贴现总数" msprop:Generator_ColumnPropNameInRow="贴现总数" msprop:Generator_ColumnVarNameInTable="column贴现总数" msprop:Generator_ColumnPropNameInTable="贴现总数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="贴现金额" msprop:Generator_UserColumnName="贴现金额" msprop:Generator_ColumnPropNameInRow="贴现金额" msprop:Generator_ColumnVarNameInTable="column贴现金额" msprop:Generator_ColumnPropNameInTable="贴现金额Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

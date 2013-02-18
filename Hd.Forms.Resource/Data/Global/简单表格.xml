@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<ReportStyleSheet xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PageHeader>
+    <LeftElement>
+      <Font family="Arial" units="Point" size="12" style="Regular" />
+      <TextFormat>%TITLE%</TextFormat>
+    </LeftElement>
+    <CenterElement>
+      <Font family="宋体" units="Point" size="18" style="Regular" />
+    </CenterElement>
+    <RightElement />
+    <TopMargin>4</TopMargin>
+    <BottomMargin>4</BottomMargin>
+  </PageHeader>
+  <PageFooter>
+    <LeftElement>
+      <Font family="Arial" units="Point" size="8.25" style="Italic" />
+      <TextFormat>%datetime format=D%</TextFormat>
+    </LeftElement>
+    <CenterElement />
+    <RightElement>
+      <Font family="Arial" units="Point" size="8.25" style="Italic" />
+      <TextFormat>共 %TOTALPAGES% 页 第 %Page% 页</TextFormat>
+    </RightElement>
+  </PageFooter>
+  <Grid>
+    <Font family="Arial" units="Point" size="8.25" style="Regular" />
+    <FooterRow />
+    <HeaderRow />
+    <GroupManagerRow />
+    <SummaryRow>
+      <TopBorder>
+        <Thickness>SingleThin</Thickness>
+      </TopBorder>
+    </SummaryRow>
+    <ColumnManagerRow>
+      <BackColor name="" argb="-2039584" />
+      <TopBorder>
+        <Thickness>SingleThin</Thickness>
+      </TopBorder>
+      <BottomBorder>
+        <Thickness>SingleThin</Thickness>
+      </BottomBorder>
+      <TopMargin>3</TopMargin>
+      <BottomMargin>3</BottomMargin>
+      <RepeatOnEachPage>true</RepeatOnEachPage>
+    </ColumnManagerRow>
+    <DataRows>
+      <RowReportStyle>
+        <TopBorder>
+          <Thickness>None</Thickness>
+        </TopBorder>
+        <RowHeightExpansion>ExpandWithoutLimits</RowHeightExpansion>
+      </RowReportStyle>
+    </DataRows>
+    <DetailGrids>
+      <GridReportStyle>
+        <Visible>false</Visible>
+        <FooterRow />
+        <HeaderRow />
+        <GroupManagerRow />
+        <SummaryRow />
+        <ColumnManagerRow />
+        <DataRows>
+          <RowReportStyle />
+        </DataRows>
+      </GridReportStyle>
+    </DetailGrids>
+    <GroupLevels>
+      <GroupReportStyle>
+        <Visible>true</Visible>
+        <FooterRow />
+        <HeaderRow>
+          <BackColor name="" argb="-1315861" />
+          <Font family="Arial" units="Point" size="8.25" style="Bold" />
+          <TopMargin>2</TopMargin>
+          <BottomMargin>2</BottomMargin>
+        </HeaderRow>
+        <GroupManagerRow />
+        <SideMarginWidth>15</SideMarginWidth>
+        <SummaryRow>
+          <Visible>true</Visible>
+          <TopMargin>2</TopMargin>
+          <BottomMargin>2</BottomMargin>
+        </SummaryRow>
+      </GroupReportStyle>
+    </GroupLevels>
+    <FixedFooterRow />
+    <FixedHeaderRow />
+  </Grid>
+</ReportStyleSheet>

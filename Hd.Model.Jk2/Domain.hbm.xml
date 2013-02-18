@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Jk2" assembly="Hd.Model.Jk2" xmlns="urn:nhibernate-mapping-2.2">
+  <joined-subclass name="进口其他业务箱" table="业务备案_进口其他业务箱" extends="Hd.Model.普通箱, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_进口其他业务箱_箱" />
+    <many-to-one name="票" not-null="true" cascade="none" outer-join="true" foreign-key="FK_进口其他业务箱_进口其他业务票" lazy="false" />
+  </joined-subclass>
+  <joined-subclass name="进口其他业务票" table="业务备案_进口其他业务票" extends="Hd.Model.普通票, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_进口其他业务票_票" />
+    <property name="进口其他业务类型" length="50" not-null="true" />
+    <property name="票箱型编号" column="票箱型" not-null="false" />
+    <property name="受理时间" not-null="false" />
+    <property name="换单时间" not-null="false" />
+    <property name="到港时间" not-null="false" />
+    <many-to-one name="票箱型" update="false" insert="false" />
+    <bag name="箱" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Hd.Model.Jk2.进口其他业务箱, Hd.Model.Jk2" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+</hibernate-mapping>

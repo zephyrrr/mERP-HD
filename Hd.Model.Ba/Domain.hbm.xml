@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Ba" assembly="Hd.Model.Ba" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Hd.Model.Ba.证件, Hd.Model.Ba" table="参数备案_证件" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="证件类型" not-null="true" />
+    <property name="名称" length="50" not-null="true" />
+    <property name="简介" length="200" not-null="false" />
+    <property name="发证日期" not-null="true" />
+    <property name="发证单位" length="100" not-null="true" />
+    <property name="下次期限" not-null="true" />
+    <property name="提醒天数" not-null="true" />
+    <property name="上次日期" not-null="false" />
+    <property name="备注" length="500" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <class name="Hd.Model.Ba.地名, Hd.Model.Ba" table="参数备案_地名" optimistic-lock="version">
+    <id name="ID" column="Id">
+      <generator class="guid.comb" />
+    </id>
+    <version name="Version" column="Version" type="Int32" unsaved-value="0" />
+    <property name="简称" length="50" not-null="true" unique="true" unique-key="UK_地名_简称" index="Idx_地名_简称" />
+    <property name="全称" length="50" not-null="true" unique="true" unique-key="UK_地名_全称" />
+    <property name="备注" length="200" />
+    <property name="省" length="6" not-null="true" />
+    <property name="市" length="6" not-null="true" />
+    <property name="区县" length="6" not-null="true" />
+    <property name="CreatedBy" length="20" not-null="true" />
+    <property name="Created" not-null="true" />
+    <property name="UpdatedBy" length="20" not-null="false" />
+    <property name="Updated" not-null="false" />
+    <property name="IsActive" not-null="true" />
+    <property name="ClientId" not-null="true" />
+    <property name="OrgId" not-null="true" />
+  </class>
+  <joined-subclass name="Hd.Model.Ba.员工, Hd.Model.Ba" table="参数备案_人员单位_员工" extends="Hd.Model.人员, Hd.Model.Base">
+    <key column="编号" foreign-key="FK_人员_员工" />
+    <property name="性别" not-null="false" />
+    <property name="出生日期" not-null="false" />
+    <property name="籍贯" length="50" not-null="false" />
+    <property name="照片" length="4096" not-null="false" />
+    <property name="身份证号" length="18" not-null="false" />
+    <property name="毕业院校" length="50" />
+    <property name="学历" not-null="false" />
+    <property name="专业" not-null="false" />
+    <property name="政治面貌" not-null="false" />
+    <property name="婚姻状况" not-null="false" />
+    <property name="加入公司日期" not-null="false" />
+    <property name="特长爱好" length="200" />
+    <property name="工作简历" length="200" />
+  </joined-subclass>
+  <joined-subclass name="Hd.Model.Ba.客户, Hd.Model.Ba" table="参数备案_人员单位_客户" extends="Hd.Model.人员, Hd.Model.Base">
+    <key column="编号" foreign-key="FK_人员_客户" />
+    <property name="首次交往" not-null="false" />
+    <property name="信誉情况" column="信誉情况" not-null="true" />
+    <property name="简况" length="200" />
+    <property name="交往记录" length="200" />
+  </joined-subclass>
+</hibernate-mapping>

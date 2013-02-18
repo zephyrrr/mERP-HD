@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Ck" assembly="Hd.Model.Ck" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Hd.Model.Ck.出口票业务费用收付, Hd.Model.Ck" schema-action="none" table="视图查询_财务费用_收付" mutable="false">
+    <id name="Id" column="Id">
+      <generator class="assigned" />
+    </id>
+    <property name="SeqNo" column="SeqNo" />
+    <property name="费用项编号" column="费用项" />
+    <many-to-one name="费用实体" column="费用实体" not-null="false" update="false" insert="false" />
+    <many-to-one name="费用项" column="费用项" not-null="false" update="false" insert="false" />
+    <many-to-one name="收_业务费用" access="field.pascalcase-m-underscore" column="收_Id" not-null="false" update="false" insert="false" />
+    <many-to-one name="付_业务费用" access="field.pascalcase-m-underscore" column="付_Id" not-null="false" update="false" insert="false" />
+    <many-to-one name="票" column="费用实体" not-null="false" update="false" insert="false" />
+  </class>
+</hibernate-mapping>

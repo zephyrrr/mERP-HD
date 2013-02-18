@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8d2385b1-1eb6-4b88-a61b-f19c90c62511}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>Program.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <AssemblyName>PythonScript2</AssemblyName>
+    <Name>PythonScript</Name>
+    <RootNamespace>PythonScript2</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="Plugins\ImeMode.py" />
+    <None Include="Plugins\比较不同_箱号.py" />
+    <None Include="出口_票费用\出口_票费用_允许应收对账.py" />
+    <None Include="出口_票费用\票费用_费用登记_费用查询.py" />
+    <None Include="对账辅助\对账辅助_导入三期堆存费.py" />
+    <None Include="对账辅助\对账辅助_导入中海费用.py" />
+    <None Include="对账辅助\对账辅助_导入大榭招商费用.py" />
+    <None Include="对账辅助\对账辅助_导入车队费用.py" />
+    <None Include="服务\服务_上传货代业务数据.py" />
+    <None Include="服务\服务_填写委托人货代自编号_出口.py" />
+    <None Include="服务\服务_数据库作业计算.py" />
+    <None Include="服务\服务_数据库备份.py" />
+    <None Include="服务\服务_港区_船舶停靠.py" />
+    <Content Include="服务\服务_生成全部票费用.py" />
+    <None Include="服务\服务_船公司.py" />
+    <None Include="服务\服务_读取商检查验结果_进口.py" />
+    <None Include="服务\服务_读取放行时间_出口.py" />
+    <None Include="服务\服务_读取放行时间_进口.py" />
+    <None Include="服务\服务_读取海关查验结果_出口.py" />
+    <None Include="港区\GangQu.py" />
+    <Content Include="港区\三期.py" />
+    <Content Include="港区\二期.py" />
+    <Content Include="港区\五期.py" />
+    <Content Include="港区\四期.py" />
+    <Content Include="船公司\ShipCompany.py" />
+    <Content Include="船公司\中远_COSCO.py" />
+    <Content Include="船公司\北欧亚_CSAV_NORASIA.py" />
+    <None Include="业务财务_应付对账单\导入中海费用.py" />
+    <None Include="业务财务_应付对账单\导入三期堆存费.py" />
+    <None Include="业务财务_应付对账单\导入大榭招商费用.py" />
+    <None Include="内贸出港_应收对账单\内贸出港_应收对账单_打印.py" />
+    <None Include="内贸出港_票费用\内贸出港_票费用_允许应收对账.py" />
+    <None Include="内贸出港_备案过程\内贸出港_分票.py" />
+    <None Include="内贸出港_备案过程\内贸出港_读取倒箱清单.py" />
+    <None Include="服务\服务_监视读取扫描件.py" />
+    <None Include="进口其他业务_应收对账单\打印进口其他业务应收对账单.py" />
+    <None Include="进口_转关\进口_出门信息读取.py" />
+    <None Include="进口_滞箱费减免\进口_滞箱费减免_新增.py" />
+    <None Include="进口_应收对账单\打印进口应收对账单_原始.py" />
+    <None Include="进口_应收对账单\打印进口应收对账单_额外.py" />
+    <None Include="进口_应收对账单\打印进口应收对账单.py" />
+    <None Include="进口_票费用\进口_票费用_允许应收对账.py" />
+    <None Include="进口_常规应收对账单\进口常规应收对账票_新增.py" />
+    <None Include="进口_常规应收对账单\进口常规应收对账票_查找.py" />
+    <None Include="进口_常规应收对账单\进口常规应收对账票_保存.py" />
+    <None Include="固定资产\固定资产_生成折旧费用.py" />
+    <None Include="服务\服务_网上读取.py" />
+    <None Include="服务\服务_读取提箱时间.py" />
+    <None Include="服务\服务_读取到港时间.py" />
+    <None Include="服务\服务_车队读取箱时间.py" />
+    <None Include="非业务财务_发票\发票_生成收款费用.py" />
+    <None Include="非业务财务_发票\发票_生成付款费用.py" />
+    <None Include="参数备案_委托人合同\合同_生成默认费用项.py" />
+    <None Include="报表_月报表\生成月报表.py" />
+    <None Include="报表_月报表\查看全部月报表.py" />
+    <None Include="报表_月报表\查看单个月报表.py" />
+    <None Include="资金票据_凭证\凭证_添加已确认对账单.py" />
+    <None Include="Plugins\test.py" />
+  </ItemGroup>
+</Project>

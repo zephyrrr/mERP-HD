@@ -1,0 +1,198 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4ED9DBFB-1C12-43F3-B8C1-6D8B3EFFF50C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hd.Service</RootNamespace>
+    <AssemblyName>Hd.Service</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMS.Profile" />
+    <Reference Include="Feng.Windows.Application, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Feng\Reference\Feng.Windows.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows.Model" />
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Controller" />
+    <Reference Include="Feng.Dao, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Reference\Feng.Dao.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Grid" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="Feng.Net" />
+    <Reference Include="Feng.NH" />
+    <Reference Include="Feng.Security" />
+    <Reference Include="Feng.View" />
+    <Reference Include="Feng.Windows" />
+    <Reference Include="Feng.Windows.Controller" />
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="Hd.Model.Base" />
+    <Reference Include="Hd.Model.Cn" />
+    <Reference Include="Hd.Model.Cn.Dao" />
+    <Reference Include="Hd.Model.Dao" />
+    <Reference Include="Hd.Model.Fp" />
+    <Reference Include="Hd.Model.Jk" />
+    <Reference Include="Hd.Model.Jk2" />
+    <Reference Include="Hd.Model.Kj" />
+    <Reference Include="Hd.Model.Nmcg" />
+    <Reference Include="Hd.NetRead" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common" />
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data" />
+    <Reference Include="NHibernate" />
+    <Reference Include="NHibernate.Mapping.Attributes" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Grid.v3.9" />
+    <Reference Include="Xceed.Editors.v2.6" />
+    <Reference Include="Xceed.UI.v1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_cw_cn_zp_addall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cw_cn_zp_addall.designer.cs">
+      <DependentUpon>frm_cw_cn_zp_addall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_cw_kj_fp_addall.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_cw_kj_fp_addall.Designer.cs">
+      <DependentUpon>frm_cw_kj_fp_addall.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HdDataBuffer.cs" />
+    <Compile Include="HdDataFactory.cs" />
+    <Compile Include="processauto.cs" />
+    <Compile Include="processauto_fyxx.cs" />
+    <Compile Include="process_cdhp.cs" />
+    <Compile Include="process_dzd.cs" />
+    <Compile Include="process_dzd_dzfz.cs" />
+    <Compile Include="process_fp.cs" />
+    <Compile Include="process_fy_fyw.cs" />
+    <Compile Include="process_fy_gdzc.cs" />
+    <Compile Include="process_fy_generate.cs" />
+    <Compile Include="process_fy_piao.cs" />
+    <Compile Include="process_fy_yw.cs" />
+    <Compile Include="process_pz.cs" />
+    <Compile Include="process_readticketfromnet.cs" />
+    <Compile Include="process_report.cs" />
+    <Compile Include="process_zp.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="process_ck.cs" />
+    <Compile Include="process_watcher.cs" />
+    <Compile Include="理论值编辑\EdtHelper.cs" />
+    <Compile Include="理论值编辑\FrmEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="理论值编辑\FrmEditor.Designer.cs">
+      <DependentUpon>FrmEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="理论值编辑\process_llzbj.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="理论值编辑\FrmEditor.resx">
+      <DependentUpon>FrmEditor.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hd.Model.Ck\Hd.Model.Ck.csproj">
+      <Project>{5C62C67B-C7B5-476E-B61F-D1FC3F1F0C38}</Project>
+      <Name>Hd.Model.Ck</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Px\Hd.Model.Px.csproj">
+      <Project>{C3BE390D-89A7-45CD-8778-ADEF059417F4}</Project>
+      <Name>Hd.Model.Px</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Yw\Hd.Model.Yw.csproj">
+      <Project>{02986CD7-2566-4008-8D34-F49D17ADBADF}</Project>
+      <Name>Hd.Model.Yw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

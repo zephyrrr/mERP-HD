@@ -1,0 +1,3 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Jk2" assembly="Hd.Model.Jk2" xmlns="urn:nhibernate-mapping-2.2">
+</hibernate-mapping>

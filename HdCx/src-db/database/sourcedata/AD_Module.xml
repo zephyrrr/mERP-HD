@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns="urn:schemas-microsoft-com:office:spreadsheet">
+ <Styles>
+<Style ss:ID="xsHeader">
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" ss:Color="Black" ss:Bold="1" />
+      <Interior ss:Color="White" ss:Pattern="Solid" />
+    </Style><Style ss:ID="xsBoolean">
+      <Alignment ss:Horizontal="Center" ss:Vertical="Center" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" />
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+    </Style><Style ss:ID="xsString">
+      <Alignment ss:Horizontal="Left" ss:Vertical="Top" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" />
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+    </Style><Style ss:ID="xsNumber">
+      <Alignment ss:Horizontal="Right" ss:Vertical="Top" />
+      <Borders>
+        <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+        <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1" ss:Color="DarkGray" />
+      </Borders>
+      <Font ss:FontName="宋体" ss:Size="9" />
+      <Interior ss:Color="#FFFFFF" ss:Pattern="Solid" />
+    </Style> </Styles>
+ <Worksheet ss:Name="AD_Module">
+  <Table>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Name</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Version</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Author</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ModuleVersion</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ModuleData</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Help</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Description</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">IsActive</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">ClientId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">OrgId</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">CreatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Created</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">UpdatedBy</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsHeader"><ss:Data ss:Type="String">Updated</ss:Data></ss:Cell>
+   </ss:Row>
+   <ss:Row>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">HdCx</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">system</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">1.0.0.0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsBoolean"><ss:Data ss:Type="Boolean">1</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsNumber"><ss:Data ss:Type="Number">0</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String">2010/6/21 15:30:17</ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+    <ss:Cell ss:StyleID="xsString"><ss:Data ss:Type="String"></ss:Data></ss:Cell>
+   </ss:Row>
+  </Table>
+ </Worksheet>
+</Workbook>

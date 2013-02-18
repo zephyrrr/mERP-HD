@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="非业务费用明细_投资Ds" targetNamespace="http://tempuri.org/TestDataSet.xsd" xmlns:mstns="http://tempuri.org/TestDataSet.xsd" xmlns="http://tempuri.org/TestDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="非业务费用明细_投资Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="非业务费用明细_投资Ds" msprop:Generator_DataSetName="非业务费用明细_投资Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="非业务费用明细_投资Ds1" msprop:Generator_UserTableName="非业务费用明细_投资Ds1" msprop:Generator_RowDeletedName="非业务费用明细_投资Ds1RowDeleted" msprop:Generator_RowChangedName="非业务费用明细_投资Ds1RowChanged" msprop:Generator_RowClassName="非业务费用明细_投资Ds1Row" msprop:Generator_RowChangingName="非业务费用明细_投资Ds1RowChanging" msprop:Generator_RowEvArgName="非业务费用明细_投资Ds1RowChangeEvent" msprop:Generator_RowEvHandlerName="非业务费用明细_投资Ds1RowChangeEventHandler" msprop:Generator_TableClassName="非业务费用明细_投资Ds1DataTable" msprop:Generator_TableVarName="table非业务费用明细_投资Ds1" msprop:Generator_RowDeletingName="非业务费用明细_投资Ds1RowDeleting" msprop:Generator_TablePropName="非业务费用明细_投资Ds1">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="相关人" msprop:Generator_UserColumnName="相关人" msprop:Generator_ColumnPropNameInRow="相关人" msprop:Generator_ColumnVarNameInTable="column相关人" msprop:Generator_ColumnPropNameInTable="相关人Column" type="xs:string" />
+              <xs:element name="月初值" msprop:Generator_UserColumnName="月初值" msprop:Generator_ColumnPropNameInRow="月初值" msprop:Generator_ColumnVarNameInTable="column月初值" msprop:Generator_ColumnPropNameInTable="月初值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月新增" msprop:Generator_UserColumnName="本月新增" msprop:Generator_ColumnPropNameInRow="本月新增" msprop:Generator_ColumnVarNameInTable="column本月新增" msprop:Generator_ColumnPropNameInTable="本月新增Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月减少" msprop:Generator_UserColumnName="本月减少" msprop:Generator_ColumnPropNameInRow="本月减少" msprop:Generator_ColumnVarNameInTable="column本月减少" msprop:Generator_ColumnPropNameInTable="本月减少Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末值" msprop:Generator_UserColumnName="月末值" msprop:Generator_ColumnPropNameInRow="月末值" msprop:Generator_ColumnVarNameInTable="column月末值" msprop:Generator_ColumnPropNameInTable="月末值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="非业务费用明细_投资" msprop:Generator_UserTableName="非业务费用明细_投资" msprop:Generator_RowDeletedName="非业务费用明细_投资RowDeleted" msprop:Generator_RowChangedName="非业务费用明细_投资RowChanged" msprop:Generator_RowClassName="非业务费用明细_投资Row" msprop:Generator_RowChangingName="非业务费用明细_投资RowChanging" msprop:Generator_RowEvArgName="非业务费用明细_投资RowChangeEvent" msprop:Generator_RowEvHandlerName="非业务费用明细_投资RowChangeEventHandler" msprop:Generator_TableClassName="非业务费用明细_投资DataTable" msprop:Generator_TableVarName="table非业务费用明细_投资" msprop:Generator_RowDeletingName="非业务费用明细_投资RowDeleting" msprop:Generator_TablePropName="非业务费用明细_投资">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="相关人" msprop:Generator_UserColumnName="相关人" msprop:Generator_ColumnVarNameInTable="column相关人" msprop:Generator_ColumnPropNameInRow="相关人" msprop:Generator_ColumnPropNameInTable="相关人Column" type="xs:string" />
+              <xs:element name="时间" msprop:Generator_UserColumnName="时间" msprop:Generator_ColumnVarNameInTable="column时间" msprop:Generator_ColumnPropNameInRow="时间" msprop:Generator_ColumnPropNameInTable="时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="投资金额" msprop:Generator_UserColumnName="投资金额" msprop:Generator_ColumnVarNameInTable="column投资金额" msprop:Generator_ColumnPropNameInRow="投资金额" msprop:Generator_ColumnPropNameInTable="投资金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="撤资金额" msprop:Generator_UserColumnName="撤资金额" msprop:Generator_ColumnVarNameInTable="column撤资金额" msprop:Generator_ColumnPropNameInRow="撤资金额" msprop:Generator_ColumnPropNameInTable="撤资金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="方式" msprop:Generator_UserColumnName="方式" msprop:Generator_ColumnVarNameInTable="column方式" msprop:Generator_ColumnPropNameInRow="方式" msprop:Generator_ColumnPropNameInTable="方式Column" type="xs:string" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="他人投资公司明细表Ds1Key1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:非业务费用明细_投资Ds1" />
+      <xs:field xpath="mstns:相关人" />
+    </xs:unique>
+    <xs:unique name="他人投资公司明细表Ds2Key1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:非业务费用明细_投资" />
+      <xs:field xpath="mstns:相关人" />
+    </xs:unique>
+  </xs:element>
+  <xs:annotation>
+    <xs:appinfo>
+      <msdata:Relationship name="非业务费用明细_投资_非业务费用明细_投资Ds1" msdata:parent="非业务费用明细_投资" msdata:child="非业务费用明细_投资Ds1" msdata:parentkey="相关人" msdata:childkey="相关人" msprop:Generator_UserRelationName="非业务费用明细_投资_非业务费用明细_投资Ds1" msprop:Generator_RelationVarName="relation非业务费用明细_投资_非业务费用明细_投资Ds1" msprop:Generator_UserChildTable="非业务费用明细_投资Ds1" msprop:Generator_UserParentTable="非业务费用明细_投资" msprop:Generator_ParentPropName="非业务费用明细_投资Row" msprop:Generator_ChildPropName="Get非业务费用明细_投资Ds1Rows" />
+    </xs:appinfo>
+  </xs:annotation>
+</xs:schema>

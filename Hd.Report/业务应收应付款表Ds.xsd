@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="业务应收应付款表Ds" targetNamespace="http://tempuri.org/应收应付款表Ds.xsd" xmlns:mstns="http://tempuri.org/应收应付款表Ds.xsd" xmlns="http://tempuri.org/应收应付款表Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="业务应收应付款表Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="业务应收应付款表Ds" msprop:Generator_DataSetName="业务应收应付款表Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="业务应收应付款" msprop:Generator_UserTableName="业务应收应付款" msprop:Generator_RowDeletedName="业务应收应付款RowDeleted" msprop:Generator_RowChangedName="业务应收应付款RowChanged" msprop:Generator_RowClassName="业务应收应付款Row" msprop:Generator_RowChangingName="业务应收应付款RowChanging" msprop:Generator_RowEvArgName="业务应收应付款RowChangeEvent" msprop:Generator_RowEvHandlerName="业务应收应付款RowChangeEventHandler" msprop:Generator_TableClassName="业务应收应付款DataTable" msprop:Generator_TableVarName="table业务应收应付款" msprop:Generator_RowDeletingName="业务应收应付款RowDeleting" msprop:Generator_TablePropName="业务应收应付款">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="委托人" msprop:Generator_UserColumnName="委托人" msprop:Generator_ColumnPropNameInRow="委托人" msprop:Generator_ColumnVarNameInTable="column委托人" msprop:Generator_ColumnPropNameInTable="委托人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="总票数" msprop:Generator_UserColumnName="总票数" msprop:Generator_ColumnPropNameInRow="总票数" msprop:Generator_ColumnVarNameInTable="column总票数" msprop:Generator_ColumnPropNameInTable="总票数Column" type="xs:int" minOccurs="0" />
+              <xs:element name="总箱量" msprop:Generator_UserColumnName="总箱量" msprop:Generator_ColumnPropNameInRow="总箱量" msprop:Generator_ColumnVarNameInTable="column总箱量" msprop:Generator_ColumnPropNameInTable="总箱量Column" type="xs:int" minOccurs="0" />
+              <xs:element name="月初_常规费用" msprop:Generator_UserColumnName="月初_常规费用" msprop:Generator_ColumnPropNameInRow="月初_常规费用" msprop:Generator_ColumnVarNameInTable="column月初_常规费用" msprop:Generator_ColumnPropNameInTable="月初_常规费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月初_额外费用" msprop:Generator_UserColumnName="月初_额外费用" msprop:Generator_ColumnPropNameInRow="月初_额外费用" msprop:Generator_ColumnVarNameInTable="column月初_额外费用" msprop:Generator_ColumnPropNameInTable="月初_额外费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当月增加_常规费用" msprop:Generator_UserColumnName="当月增加_常规费用" msprop:Generator_ColumnPropNameInRow="当月增加_常规费用" msprop:Generator_ColumnVarNameInTable="column当月增加_常规费用" msprop:Generator_ColumnPropNameInTable="当月增加_常规费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当月增加_额外费用" msprop:Generator_UserColumnName="当月增加_额外费用" msprop:Generator_ColumnPropNameInRow="当月增加_额外费用" msprop:Generator_ColumnVarNameInTable="column当月增加_额外费用" msprop:Generator_ColumnPropNameInTable="当月增加_额外费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当月减少_常规费用" msprop:Generator_UserColumnName="当月减少_常规费用" msprop:Generator_ColumnPropNameInRow="当月减少_常规费用" msprop:Generator_ColumnVarNameInTable="column当月减少_常规费用" msprop:Generator_ColumnPropNameInTable="当月减少_常规费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="当月减少_额外费用" msprop:Generator_UserColumnName="当月减少_额外费用" msprop:Generator_ColumnPropNameInRow="当月减少_额外费用" msprop:Generator_ColumnVarNameInTable="column当月减少_额外费用" msprop:Generator_ColumnPropNameInTable="当月减少_额外费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末_常规费用" msprop:Generator_UserColumnName="月末_常规费用" msprop:Generator_ColumnPropNameInRow="月末_常规费用" msprop:Generator_ColumnVarNameInTable="column月末_常规费用" msprop:Generator_ColumnPropNameInTable="月末_常规费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末_额外费用" msprop:Generator_UserColumnName="月末_额外费用" msprop:Generator_ColumnPropNameInRow="月末_额外费用" msprop:Generator_ColumnVarNameInTable="column月末_额外费用" msprop:Generator_ColumnPropNameInTable="月末_额外费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末前待确认业务_常规费用" msprop:Generator_UserColumnName="月末前待确认业务_常规费用" msprop:Generator_ColumnPropNameInRow="月末前待确认业务_常规费用" msprop:Generator_ColumnVarNameInTable="column月末前待确认业务_常规费用" msprop:Generator_ColumnPropNameInTable="月末前待确认业务_常规费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末前待确认业务_额外费用" msprop:Generator_UserColumnName="月末前待确认业务_额外费用" msprop:Generator_ColumnPropNameInRow="月末前待确认业务_额外费用" msprop:Generator_ColumnVarNameInTable="column月末前待确认业务_额外费用" msprop:Generator_ColumnPropNameInTable="月末前待确认业务_额外费用Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

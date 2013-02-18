@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{FC850DFA-CFEC-4756-A852-B3AC9CDAC88E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hd.Forms</RootNamespace>
+    <AssemblyName>Hd.Forms.Resource</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Reference\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AMS.Profile" />
+    <Reference Include="Feng.Windows.Application, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e562c5de18d0ba3c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Feng\Reference\Feng.Windows.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Feng.Windows.Model" />
+    <Reference Include="Feng.Base" />
+    <Reference Include="Feng.Controller" />
+    <Reference Include="Feng.Dao" />
+    <Reference Include="Feng.Data" />
+    <Reference Include="Feng.Grid" />
+    <Reference Include="Feng.Model" />
+    <Reference Include="Feng.NH" />
+    <Reference Include="Feng.Security" />
+    <Reference Include="Feng.View" />
+    <Reference Include="Feng.Windows" />
+    <Reference Include="Feng.Windows.Controller" />
+    <Reference Include="Feng.Windows.Forms" />
+    <Reference Include="Hd.Model.Dao" />
+    <Reference Include="Hd.Model.Jk" />
+    <Reference Include="Hd.Model.Jk2" />
+    <Reference Include="Hd.Model.Kj" />
+    <Reference Include="Hd.Model.Nmcg" />
+    <Reference Include="NHibernate" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xceed.Grid.v3.9" />
+    <Reference Include="Xceed.Editors.v2.6" />
+    <Reference Include="Xceed.UI.v1.4" />
+    <Reference Include="Xceed.SmartUI.v3.6" />
+    <Reference Include="Xceed.SmartUI.Controls.v3.6" />
+    <Reference Include="Xceed.SmartUI.UIStyle.v3.6" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm_csba.rydw_kh_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_csba.rydw_kh_detail.Designer.cs">
+      <DependentUpon>frm_csba.rydw_kh_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_csba_rydw_yg_detail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_csba_rydw_yg_detail.Designer.cs">
+      <DependentUpon>frm_csba_rydw_yg_detail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_fkpz_cn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_fkpz_cn.Designer.cs">
+      <DependentUpon>frm_fkpz_cn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_fkpz_kj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_fkpz_kj.Designer.cs">
+      <DependentUpon>frm_fkpz_kj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_main_task.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_main_task.Designer.cs">
+      <DependentUpon>frm_main_task.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_skpz_cn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_skpz_cn.Designer.cs">
+      <DependentUpon>frm_skpz_cn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_skpz_kj.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_skpz_kj.Designer.cs">
+      <DependentUpon>frm_skpz_kj.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm_csba.rydw_kh_detail.resx">
+      <DependentUpon>frm_csba.rydw_kh_detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_csba_rydw_yg_detail.resx">
+      <DependentUpon>frm_csba_rydw_yg_detail.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_fkpz_kj.resx">
+      <DependentUpon>frm_fkpz_kj.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="报1.png" />
+    <EmbeddedResource Include="报2.png" />
+    <EmbeddedResource Include="报3.png" />
+    <EmbeddedResource Include="滞1.png" />
+    <EmbeddedResource Include="滞2.png" />
+    <EmbeddedResource Include="滞3.png" />
+    <EmbeddedResource Include="疏1.png" />
+    <EmbeddedResource Include="疏2.png" />
+    <EmbeddedResource Include="疏3.png" />
+    <EmbeddedResource Include="证1.png" />
+    <EmbeddedResource Include="证2.png" />
+    <EmbeddedResource Include="证3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Global\简单表格.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="黑1.png" />
+    <EmbeddedResource Include="警告.png" />
+    <EmbeddedResource Include="超1.png" />
+    <EmbeddedResource Include="frm_fkpz_cn.resx">
+      <DependentUpon>frm_fkpz_cn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_skpz_cn.resx">
+      <DependentUpon>frm_skpz_cn.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_skpz_kj.resx">
+      <DependentUpon>frm_skpz_kj.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Icons\付款.png" />
+    <EmbeddedResource Include="Icons\会计修改.png" />
+    <EmbeddedResource Include="Icons\作废.png" />
+    <EmbeddedResource Include="Icons\出纳修改.png" />
+    <EmbeddedResource Include="Icons\删除.png" />
+    <EmbeddedResource Include="Icons\发票入账.png" />
+    <EmbeddedResource Include="Icons\实时更新.png" />
+    <EmbeddedResource Include="Icons\审核.png" />
+    <EmbeddedResource Include="Icons\审核人修改.png" />
+    <EmbeddedResource Include="Icons\打印.png" />
+    <EmbeddedResource Include="Icons\批量删除.png" />
+    <EmbeddedResource Include="Icons\批量添加.png" />
+    <EmbeddedResource Include="Icons\批量添加其他进口业务费用.png" />
+    <EmbeddedResource Include="Icons\批量添加内贸出港费用.png" />
+    <EmbeddedResource Include="Icons\批量添加费用.png" />
+    <EmbeddedResource Include="Icons\批量添加进口费用.png" />
+    <EmbeddedResource Include="Icons\承兑汇票_托收.png" />
+    <EmbeddedResource Include="Icons\承兑汇票_托收贴现.png" />
+    <EmbeddedResource Include="Icons\承兑汇票_撤销托收贴现.png" />
+    <EmbeddedResource Include="Icons\承兑汇票_贴现.png" />
+    <EmbeddedResource Include="Icons\提交.png" />
+    <EmbeddedResource Include="Icons\提现.png" />
+    <EmbeddedResource Include="Icons\撤销.png" />
+    <EmbeddedResource Include="Icons\收款.png" />
+    <EmbeddedResource Include="Icons\新增成本发票.png" />
+    <EmbeddedResource Include="Icons\添加业务费用.png" />
+    <EmbeddedResource Include="Icons\添加非业务费用.png" />
+    <EmbeddedResource Include="Icons\生成付款凭证.png" />
+    <EmbeddedResource Include="Icons\生成凭证.png" />
+    <EmbeddedResource Include="Icons\生成收款凭证.png" />
+    <EmbeddedResource Include="Icons\生成收款相应费用.png" />
+    <EmbeddedResource Include="Icons\生成相同费用.png" />
+    <EmbeddedResource Include="Icons\生成费用.png" />
+    <EmbeddedResource Include="Icons\网络读取.png" />
+    <EmbeddedResource Include="Icons\自动生成费用.png" />
+    <EmbeddedResource Include="Icons\费用登记.png" />
+    <EmbeddedResource Include="Icons\转账.png" />
+    <EmbeddedResource Include="Icons\选择.png" />
+    <EmbeddedResource Include="Icons\选择费用.png" />
+    <EmbeddedResource Include="Icons\业务财务.png" />
+    <EmbeddedResource Include="Icons\内贸出港.png" />
+    <EmbeddedResource Include="Icons\参数备案.png" />
+    <EmbeddedResource Include="Icons\报表.png" />
+    <EmbeddedResource Include="Icons\查询统计.png" />
+    <EmbeddedResource Include="Icons\资金票据.png" />
+    <EmbeddedResource Include="Icons\进口.png" />
+    <EmbeddedResource Include="Icons\进口其他业务.png" />
+    <EmbeddedResource Include="Icons\非业务财务.png" />
+    <EmbeddedResource Include="Images\Logo.jpg">
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Hd.Model.Base\Hd.Model.Base.csproj">
+      <Project>{7F73873B-3465-485F-B83B-43526F544C6D}</Project>
+      <Name>Hd.Model.Base</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Hd.Model.Yw\Hd.Model.Yw.csproj">
+      <Project>{02986CD7-2566-4008-8D34-F49D17ADBADF}</Project>
+      <Name>Hd.Model.Yw</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

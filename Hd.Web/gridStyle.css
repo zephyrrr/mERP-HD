@@ -1,0 +1,238 @@
+.Grid 
+{ 
+  border: 1px solid #57566F; 
+  border-bottom: 2px solid #57566F; 
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+
+
+.GridHeader
+{
+  background-image: url(images/grid_headerBg.gif); 
+  background-color: #8988A5; 
+  border-bottom: 1px solid #57566F; 
+  height: 30px;
+  padding-left: 3px;
+  cursor: default; 
+  color: #FFFFFF;  
+  font-family: verdana; 
+  font-size: 10px;
+  font-weight: bold;
+  vertical-align: center;
+}
+
+.GridHeaderText
+{
+  color: #FFFFFF;  
+  font-family: verdana; 
+  font-size: 10px;
+}
+
+
+.GridData
+{
+  border: 0px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+  height: 337px;
+}
+
+.GridFooter
+{
+  background-image: url(images/grid_footer_bg.gif);
+  cursor: default; 
+  padding: 5px;
+  height: 40px;
+  vertical-align: bottom;
+  border: 0px;
+  border-left: 5px solid black;
+  border-right: 5px solid black;
+}
+
+.GridFooterText
+{
+  color: #000000;  
+  font-family: verdana; 
+  font-size: 11px;
+}
+
+.HeadingRow 
+{ 
+  background-color: #E9E9EB; 
+  background-image: url(images/header_rowBg.gif);   
+}
+
+/* ÁÐÃû  */
+.HeadingCell 
+{ 
+  background-image: url(images/header_bg.gif);   
+  background-color: #E9E9EB; 
+  padding: 5px;
+  padding-top: 2px; 
+  padding-bottom: 2px; 
+  cursor: default;
+}
+
+.HeadingCellActive
+{ 
+  background-image: url(images/header_activeBg.gif);   
+  background-color: #F6F6F7;  
+}
+
+
+.HeadingCellHover
+{ 
+  background-image: url(images/header_hoverBg.gif);   
+  background-color: #F6F6F7; 
+}
+
+.HeadingCellHover
+{ 
+  background-image: url(images/header_hoverBg.gif);   
+  background-color: #F6F6F7; 
+}
+
+.HeadingRow td.FirstHeadingCell
+{ 
+  background-image: url(images/header_bg.gif); 
+}
+
+.HeadingCellText
+{
+  font-family: verdana; 
+  font-size: 10px; 
+  font-weight: bold; 
+  text-align: left;
+  color: #000000;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+.Row 
+{ 
+  background-color: #FFFFFF; 
+  cursor: default;
+}
+
+.Row td.DataCell 
+{ 
+  padding: 3px; 
+  padding-top: 2px; 
+  padding-bottom: 1px; 
+  border-bottom: 1px solid #BFDBF5; 
+  font-family: verdana; 
+  font-size: 10px;
+  color: #000000;
+} 
+
+.SortedDataCell 
+{ 
+  background-color: #F5F5F5; 
+} 
+
+.Row td.LastDataCell 
+{ 
+  background-color: #EFEFF4; 
+} 
+
+.SelectedRow 
+{ 
+  cursor: default;
+  background-color: #CDCEDC;
+}
+
+.SelectedRow td.DataCell 
+{ 
+  background-image: url(images/grid_selected_item_bg.gif); 
+  padding: 2px; 
+  padding-left: 3px; 
+  padding-top: 2px; 
+  padding-bottom: 1px; 
+  font-family: verdana; 
+  font-size: 10px;
+  color: #000000;
+  border-bottom: 1px solid #BFDBF5; 
+  border-right: 0px; 
+}
+
+.SelectedRow td.FirstDataCell 
+{ 
+  border-left: 1px solid #4B4B6F; 
+  border-right: 0px; 
+  padding-left: 2px; 
+  padding-right: 3px; 
+}
+
+.SelectedRow td.LastDataCell 
+{ 
+  border-right: 1px solid #4B4B6F; 
+}
+
+.GroupHeading
+{
+  color: #706F91; 
+  background-color: #FFFFFF; 
+  font-family: verdana; 
+  font-weight: bold;
+  font-size: 11px; 
+  border-bottom: 2px solid #A5A4BD; 
+  padding-top: 10px;
+  padding-bottom: 3px;
+}
+
+.GroupByCell
+{
+  cursor: pointer;
+}
+
+.GroupByText
+{
+  color: #FFFFFF; 
+  font-size: 11px;   
+  font-weight: bold; 
+  padding-right: 5px;
+}
+
+
+.SliderPopup
+{
+  background-color: #ffffff; 
+  border: 1px solid #4B4B6F; 
+  border-top-color: #9495A2; 
+  border-left-color: #9495A2; 
+  font-size: 11px; 
+  font-family: Verdana;
+  color: #000000;
+}
+
+.GroupHeading
+{ 
+  background-color: #FFEEC2; 
+  padding: 0px; 
+}
+
+.GroupByCell
+{
+  cursor: pointer;
+}
+
+.GroupByText
+{
+  color: #FFFFFF; 
+  font-size: 11px;   
+  font-weight: bold; 
+  padding-right: 5px;
+}
+
+
+.SliderPopup
+{
+  background-color: #ffffff; 
+  border: 1px solid #4B4B6F; 
+  border-top-color: #9495A2; 
+  border-left-color: #9495A2; 
+  font-size: 11px; 
+  font-family: Verdana;
+  color: #000000;
+}

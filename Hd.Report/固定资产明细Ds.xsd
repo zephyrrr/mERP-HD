@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="固定资产明细Ds" targetNamespace="http://tempuri.org/固定资产Ds.xsd" xmlns:mstns="http://tempuri.org/固定资产Ds.xsd" xmlns="http://tempuri.org/固定资产Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="Hd_AConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="Hd_AConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Hd.Report.Properties.Settings.GlobalReference.Default.Hd_AConnectionString1" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="固定资产明细Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="固定资产明细Ds" msprop:Generator_DataSetName="固定资产明细Ds">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="固定资产明细" msprop:Generator_UserTableName="固定资产明细" msprop:Generator_RowDeletedName="固定资产明细RowDeleted" msprop:Generator_RowChangedName="固定资产明细RowChanged" msprop:Generator_RowClassName="固定资产明细Row" msprop:Generator_RowChangingName="固定资产明细RowChanging" msprop:Generator_RowEvArgName="固定资产明细RowChangeEvent" msprop:Generator_RowEvHandlerName="固定资产明细RowChangeEventHandler" msprop:Generator_TableClassName="固定资产明细DataTable" msprop:Generator_TableVarName="table固定资产明细" msprop:Generator_RowDeletingName="固定资产明细RowDeleting" msprop:Generator_TablePropName="固定资产明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="分类" msprop:Generator_UserColumnName="分类" msprop:Generator_ColumnPropNameInRow="分类" msprop:Generator_ColumnVarNameInTable="column分类" msprop:Generator_ColumnPropNameInTable="分类Column" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="日期" msprop:Generator_UserColumnName="日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInTable="日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="资产归零时间" msprop:Generator_UserColumnName="资产归零时间" msprop:Generator_ColumnVarNameInTable="column资产归零时间" msprop:Generator_ColumnPropNameInRow="资产归零时间" msprop:Generator_ColumnPropNameInTable="资产归零时间Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="月末估值" msprop:Generator_UserColumnName="月末估值" msprop:Generator_ColumnVarNameInTable="column月末估值" msprop:Generator_ColumnPropNameInRow="月末估值" msprop:Generator_ColumnPropNameInTable="月末估值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="累计折旧" msprop:Generator_UserColumnName="累计折旧" msprop:Generator_ColumnVarNameInTable="column累计折旧" msprop:Generator_ColumnPropNameInRow="累计折旧" msprop:Generator_ColumnPropNameInTable="累计折旧Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月折旧" msprop:Generator_UserColumnName="本月折旧" msprop:Generator_ColumnVarNameInTable="column本月折旧" msprop:Generator_ColumnPropNameInRow="本月折旧" msprop:Generator_ColumnPropNameInTable="本月折旧Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="购入金额" msprop:Generator_UserColumnName="购入金额" msprop:Generator_ColumnPropNameInRow="购入金额" msprop:Generator_ColumnVarNameInTable="column购入金额" msprop:Generator_ColumnPropNameInTable="购入金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="新旧" msprop:Generator_UserColumnName="新旧" msprop:Generator_ColumnPropNameInRow="新旧" msprop:Generator_ColumnVarNameInTable="column新旧" msprop:Generator_ColumnPropNameInTable="新旧Column" type="xs:string" minOccurs="0" />
+              <xs:element name="简介" msprop:Generator_UserColumnName="简介" msprop:Generator_ColumnVarNameInTable="column简介" msprop:Generator_ColumnPropNameInRow="简介" msprop:Generator_ColumnPropNameInTable="简介Column" type="xs:string" minOccurs="0" />
+              <xs:element name="月初值" msprop:Generator_UserColumnName="月初值" msprop:Generator_ColumnVarNameInTable="column月初值" msprop:Generator_ColumnPropNameInRow="月初值" msprop:Generator_ColumnPropNameInTable="月初值Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="实付佣金明细Ds" targetNamespace="http://tempuri.org/实付佣金明细Ds.xsd" xmlns:mstns="http://tempuri.org/实付佣金明细Ds.xsd" xmlns="http://tempuri.org/实付佣金明细Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="实付佣金明细Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="实付佣金明细Ds" msprop:Generator_DataSetName="实付佣金明细Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="实付佣金明细" msprop:Generator_UserTableName="实付佣金明细" msprop:Generator_RowDeletedName="实付佣金明细RowDeleted" msprop:Generator_RowChangedName="实付佣金明细RowChanged" msprop:Generator_RowClassName="实付佣金明细Row" msprop:Generator_RowChangingName="实付佣金明细RowChanging" msprop:Generator_RowEvArgName="实付佣金明细RowChangeEvent" msprop:Generator_RowEvHandlerName="实付佣金明细RowChangeEventHandler" msprop:Generator_TableClassName="实付佣金明细DataTable" msprop:Generator_TableVarName="table实付佣金明细" msprop:Generator_RowDeletingName="实付佣金明细RowDeleting" msprop:Generator_TablePropName="实付佣金明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="日期" msprop:Generator_UserColumnName="日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInTable="日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="相关人" msprop:Generator_UserColumnName="相关人" msprop:Generator_ColumnPropNameInRow="相关人" msprop:Generator_ColumnVarNameInTable="column相关人" msprop:Generator_ColumnPropNameInTable="相关人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="金额" msprop:Generator_UserColumnName="金额" msprop:Generator_ColumnPropNameInRow="金额" msprop:Generator_ColumnVarNameInTable="column金额" msprop:Generator_ColumnPropNameInTable="金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="凭证号" msprop:Generator_UserColumnName="凭证号" msprop:Generator_ColumnPropNameInRow="凭证号" msprop:Generator_ColumnVarNameInTable="column凭证号" msprop:Generator_ColumnPropNameInTable="凭证号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="经手人" msprop:Generator_UserColumnName="经手人" msprop:Generator_ColumnPropNameInRow="经手人" msprop:Generator_ColumnVarNameInTable="column经手人" msprop:Generator_ColumnPropNameInTable="经手人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

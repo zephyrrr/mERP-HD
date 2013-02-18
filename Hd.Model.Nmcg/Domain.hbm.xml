@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping namespace="Hd.Model.Nmcg" assembly="Hd.Model.Nmcg" xmlns="urn:nhibernate-mapping-2.2">
+  <joined-subclass name="内贸出港箱" table="业务备案_内贸出港箱" extends="Hd.Model.普通箱, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_内贸出港箱_箱" />
+    <property name="最终目的地编号" column="最终目的地" length="6" />
+    <property name="件数" not-null="false" />
+    <property name="回货箱号" length="12" index="Idx_内贸出港箱_回货箱号" />
+    <property name="车号" length="12" />
+    <property name="装货地" length="20" />
+    <property name="拉箱时间" not-null="false" />
+    <property name="装货时间" not-null="false" />
+    <property name="提箱时间" not-null="false" />
+    <property name="还箱时间" not-null="false" />
+    <property name="最终免箱天数" not-null="false" />
+    <property name="破损记录" length="200" />
+    <property name="破损责任人" length="20" />
+    <property name="内贸海运费" precision="19" scale="2" not-null="false" />
+    <many-to-one name="票" not-null="true" cascade="none" outer-join="true" foreign-key="FK_内贸出港箱_内贸出港票" lazy="false" />
+    <many-to-one name="最终目的地" update="false" insert="false" foreign-key="FK_内贸出港箱_最终目的地" />
+  </joined-subclass>
+  <joined-subclass name="内贸出港票" table="业务备案_内贸出港票" extends="Hd.Model.普通票, Hd.Model.Yw">
+    <key column="Id" foreign-key="FK_内贸出港票_票" />
+    <property name="操作完全标志" not-null="true" />
+    <property name="预配提单号" length="30" />
+    <property name="预配船名航次" length="30" />
+    <property name="条款" not-null="false" />
+    <property name="目的港编号" column="目的港" length="6" />
+    <property name="预计开航日期" not-null="false" />
+    <property name="开航日期" not-null="false" />
+    <property name="进港地编号" column="进港地" length="6" />
+    <property name="预计到港时间" not-null="false" />
+    <property name="到港时间" not-null="false" />
+    <property name="倒箱仓库编号" column="倒箱仓库" length="6" />
+    <property name="承运人编号" column="承运人" length="6" />
+    <property name="对港承运人编号" column="对港承运人" length="6" />
+    <property name="免箱天数" not-null="false" />
+    <many-to-one name="目的港" update="false" insert="false" foreign-key="FK_内贸出港票_目的港" />
+    <many-to-one name="进港地" update="false" insert="false" foreign-key="FK_内贸出港票_进港地" />
+    <many-to-one name="倒箱仓库" update="false" insert="false" foreign-key="FK_内贸出港票_倒箱仓库" />
+    <many-to-one name="承运人" update="false" insert="false" foreign-key="FK_内贸出港票_承运人" />
+    <many-to-one name="对港承运人" update="false" insert="false" foreign-key="FK_内贸出港箱_对港承运人" />
+    <bag name="箱" inverse="true" cascade="none">
+      <key column="票" />
+      <one-to-many class="Hd.Model.Nmcg.内贸出港箱, Hd.Model.Nmcg" not-found="ignore" />
+    </bag>
+  </joined-subclass>
+</hibernate-mapping>

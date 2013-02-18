@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Hd.Web.Services.SoaDataService" CodeBehind="SoaDataService.svc.cs" %>

@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="滞箱费Ds" targetNamespace="http://tempuri.org/滞箱费Ds.xsd" xmlns:mstns="http://tempuri.org/滞箱费Ds.xsd" xmlns="http://tempuri.org/滞箱费Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="滞箱费Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="滞箱费Ds" msprop:Generator_DataSetName="滞箱费Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="滞箱费" msprop:Generator_UserTableName="滞箱费" msprop:Generator_RowDeletedName="滞箱费RowDeleted" msprop:Generator_RowChangedName="滞箱费RowChanged" msprop:Generator_RowClassName="滞箱费Row" msprop:Generator_RowChangingName="滞箱费RowChanging" msprop:Generator_RowEvArgName="滞箱费RowChangeEvent" msprop:Generator_RowEvHandlerName="滞箱费RowChangeEventHandler" msprop:Generator_TableClassName="滞箱费DataTable" msprop:Generator_TableVarName="table滞箱费" msprop:Generator_RowDeletingName="滞箱费RowDeleting" msprop:Generator_TablePropName="滞箱费">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="对账单" msprop:Generator_UserColumnName="对账单" msprop:Generator_ColumnPropNameInRow="对账单" msprop:Generator_ColumnVarNameInTable="column对账单" msprop:Generator_ColumnPropNameInTable="对账单Column" type="xs:string" minOccurs="0" />
+              <xs:element name="委托人" msprop:Generator_UserColumnName="委托人" msprop:Generator_ColumnPropNameInRow="委托人" msprop:Generator_ColumnVarNameInTable="column委托人" msprop:Generator_ColumnPropNameInTable="委托人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="船公司" msprop:Generator_UserColumnName="船公司" msprop:Generator_ColumnPropNameInRow="船公司" msprop:Generator_ColumnVarNameInTable="column船公司" msprop:Generator_ColumnPropNameInTable="船公司Column" type="xs:string" minOccurs="0" />
+              <xs:element name="货代自编号" msprop:Generator_UserColumnName="货代自编号" msprop:Generator_ColumnPropNameInRow="货代自编号" msprop:Generator_ColumnVarNameInTable="column货代自编号" msprop:Generator_ColumnPropNameInTable="货代自编号Column" type="xs:string" minOccurs="0" />
+              <xs:element name="滞箱费" msprop:Generator_UserColumnName="滞箱费" msprop:Generator_ColumnPropNameInRow="滞箱费" msprop:Generator_ColumnVarNameInTable="column滞箱费" msprop:Generator_ColumnPropNameInTable="滞箱费Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="已对账" msprop:Generator_UserColumnName="已对账" msprop:Generator_ColumnPropNameInRow="已对账" msprop:Generator_ColumnVarNameInTable="column已对账" msprop:Generator_ColumnPropNameInTable="已对账Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="未对账" msprop:Generator_UserColumnName="未对账" msprop:Generator_ColumnPropNameInRow="未对账" msprop:Generator_ColumnVarNameInTable="column未对账" msprop:Generator_ColumnPropNameInTable="未对账Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="自己承担" msprop:Generator_UserColumnName="自己承担" msprop:Generator_ColumnPropNameInRow="自己承担" msprop:Generator_ColumnVarNameInTable="column自己承担" msprop:Generator_ColumnPropNameInTable="自己承担Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="车队承担" msprop:Generator_UserColumnName="车队承担" msprop:Generator_ColumnPropNameInRow="车队承担" msprop:Generator_ColumnVarNameInTable="column车队承担" msprop:Generator_ColumnPropNameInTable="车队承担Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="关账日期" msprop:Generator_UserColumnName="关账日期" msprop:Generator_ColumnVarNameInTable="column关账日期" msprop:Generator_ColumnPropNameInRow="关账日期" msprop:Generator_ColumnPropNameInTable="关账日期Column" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

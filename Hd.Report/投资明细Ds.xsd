@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="投资明细Ds" targetNamespace="http://tempuri.org/投资明细_总额投资明细Ds.xsd" xmlns:mstns="http://tempuri.org/投资明细_总额投资明细Ds.xsd" xmlns="http://tempuri.org/投资明细_总额投资明细Ds.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="投资明细Ds" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="投资明细Ds" msprop:Generator_DataSetName="投资明细Ds" msprop:EnableTableAdapterManager="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="投资明细_投资增减明细" msprop:Generator_UserTableName="投资明细_投资增减明细" msprop:Generator_RowDeletedName="投资明细_投资增减明细RowDeleted" msprop:Generator_RowChangedName="投资明细_投资增减明细RowChanged" msprop:Generator_RowClassName="投资明细_投资增减明细Row" msprop:Generator_RowChangingName="投资明细_投资增减明细RowChanging" msprop:Generator_RowEvArgName="投资明细_投资增减明细RowChangeEvent" msprop:Generator_RowEvHandlerName="投资明细_投资增减明细RowChangeEventHandler" msprop:Generator_TableClassName="投资明细_投资增减明细DataTable" msprop:Generator_TableVarName="table投资明细_投资增减明细" msprop:Generator_RowDeletingName="投资明细_投资增减明细RowDeleting" msprop:Generator_TablePropName="投资明细_投资增减明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="相关人" msprop:Generator_UserColumnName="相关人" msprop:Generator_ColumnPropNameInRow="相关人" msprop:Generator_ColumnVarNameInTable="column相关人" msprop:Generator_ColumnPropNameInTable="相关人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="日期" msprop:Generator_UserColumnName="日期" msprop:Generator_ColumnPropNameInRow="日期" msprop:Generator_ColumnVarNameInTable="column日期" msprop:Generator_ColumnPropNameInTable="日期Column" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="投资金额" msprop:Generator_UserColumnName="投资金额" msprop:Generator_ColumnPropNameInRow="投资金额" msprop:Generator_ColumnVarNameInTable="column投资金额" msprop:Generator_ColumnPropNameInTable="投资金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="撤资金额" msprop:Generator_UserColumnName="撤资金额" msprop:Generator_ColumnPropNameInRow="撤资金额" msprop:Generator_ColumnVarNameInTable="column撤资金额" msprop:Generator_ColumnPropNameInTable="撤资金额Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="方式" msprop:Generator_UserColumnName="方式" msprop:Generator_ColumnPropNameInRow="方式" msprop:Generator_ColumnVarNameInTable="column方式" msprop:Generator_ColumnPropNameInTable="方式Column" type="xs:string" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="类型" msprop:Generator_UserColumnName="类型" msprop:Generator_ColumnPropNameInRow="类型" msprop:Generator_ColumnVarNameInTable="column类型" msprop:Generator_ColumnPropNameInTable="类型Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="投资明细_投资总额明细" msprop:Generator_UserTableName="投资明细_投资总额明细" msprop:Generator_RowDeletedName="投资明细_投资总额明细RowDeleted" msprop:Generator_RowChangedName="投资明细_投资总额明细RowChanged" msprop:Generator_RowClassName="投资明细_投资总额明细Row" msprop:Generator_RowChangingName="投资明细_投资总额明细RowChanging" msprop:Generator_RowEvArgName="投资明细_投资总额明细RowChangeEvent" msprop:Generator_RowEvHandlerName="投资明细_投资总额明细RowChangeEventHandler" msprop:Generator_TableClassName="投资明细_投资总额明细DataTable" msprop:Generator_TableVarName="table投资明细_投资总额明细" msprop:Generator_RowDeletingName="投资明细_投资总额明细RowDeleting" msprop:Generator_TablePropName="投资明细_投资总额明细">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="相关人" msprop:Generator_UserColumnName="相关人" msprop:Generator_ColumnPropNameInRow="相关人" msprop:Generator_ColumnVarNameInTable="column相关人" msprop:Generator_ColumnPropNameInTable="相关人Column" type="xs:string" minOccurs="0" />
+              <xs:element name="月初值" msprop:Generator_UserColumnName="月初值" msprop:Generator_ColumnPropNameInRow="月初值" msprop:Generator_ColumnVarNameInTable="column月初值" msprop:Generator_ColumnPropNameInTable="月初值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月增加" msprop:Generator_UserColumnName="本月增加" msprop:Generator_ColumnPropNameInRow="本月增加" msprop:Generator_ColumnVarNameInTable="column本月增加" msprop:Generator_ColumnPropNameInTable="本月增加Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月减少" msprop:Generator_UserColumnName="本月减少" msprop:Generator_ColumnPropNameInRow="本月减少" msprop:Generator_ColumnVarNameInTable="column本月减少" msprop:Generator_ColumnPropNameInTable="本月减少Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="备注" msprop:Generator_UserColumnName="备注" msprop:Generator_ColumnPropNameInRow="备注" msprop:Generator_ColumnVarNameInTable="column备注" msprop:Generator_ColumnPropNameInTable="备注Column" type="xs:string" minOccurs="0" />
+              <xs:element name="类型" msprop:Generator_UserColumnName="类型" msprop:Generator_ColumnVarNameInTable="column类型" msprop:Generator_ColumnPropNameInRow="类型" msprop:Generator_ColumnPropNameInTable="类型Column" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="投资明细_总体情况" msprop:Generator_UserTableName="投资明细_总体情况" msprop:Generator_RowDeletedName="投资明细_总体情况RowDeleted" msprop:Generator_TableClassName="投资明细_总体情况DataTable" msprop:Generator_RowChangedName="投资明细_总体情况RowChanged" msprop:Generator_RowClassName="投资明细_总体情况Row" msprop:Generator_RowChangingName="投资明细_总体情况RowChanging" msprop:Generator_RowEvArgName="投资明细_总体情况RowChangeEvent" msprop:Generator_RowEvHandlerName="投资明细_总体情况RowChangeEventHandler" msprop:Generator_TablePropName="投资明细_总体情况" msprop:Generator_TableVarName="table投资明细_总体情况" msprop:Generator_RowDeletingName="投资明细_总体情况RowDeleting">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="月初值" msprop:Generator_UserColumnName="月初值" msprop:Generator_ColumnPropNameInRow="月初值" msprop:Generator_ColumnVarNameInTable="column月初值" msprop:Generator_ColumnPropNameInTable="月初值Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月增加" msprop:Generator_UserColumnName="本月增加" msprop:Generator_ColumnPropNameInRow="本月增加" msprop:Generator_ColumnVarNameInTable="column本月增加" msprop:Generator_ColumnPropNameInTable="本月增加Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="本月减少" msprop:Generator_UserColumnName="本月减少" msprop:Generator_ColumnPropNameInRow="本月减少" msprop:Generator_ColumnVarNameInTable="column本月减少" msprop:Generator_ColumnPropNameInTable="本月减少Column" type="xs:decimal" minOccurs="0" />
+              <xs:element name="月末值" msprop:Generator_UserColumnName="月末值" msprop:Generator_ColumnPropNameInRow="月末值" msprop:Generator_ColumnVarNameInTable="column月末值" msprop:Generator_ColumnPropNameInTable="月末值Column" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
